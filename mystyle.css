@@ -92,8 +92,8 @@
   
   .responsive {
     padding: 0 6px;
-    float: left;
-    width: 40%;
+    float: none;
+    width: 90%;
   }
   
   @media only screen and (max-width: 1000px) {
@@ -134,10 +134,38 @@ p.project-introduction strong {
 p {
   background-color: #cac6c6; /* Light gray background color */
   border-radius: 8px; /* Rounded corners */
-  padding: 20px 400px 20px 20px; /* Padding: top right bottom left */
+  padding: 20px 40px 20px 20px; /* Padding: top right bottom left */
   font-family: 'Arial', sans-serif; /* Use your preferred font */
   font-size: 16px;
   line-height: 1.5;
   color: #333; /* Text color */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle box shadow for depth */
+}
+
+
+/* Box styling */
+#codeBox {
+  min-height: 80px;
+  position: relative;
+  border: 3px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+/* Updated styling for the code block */
+#codeBlock {
+  display: inline-block;
+  padding: 10px;
+  margin: 0;
+}
+/* Optional styling for the button */
+#copyButton {
+  /* bottom: 5px; */
+  right: 10px;
+  cursor: pointer;
+  position: relative;
+  padding: 8px 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
 }
