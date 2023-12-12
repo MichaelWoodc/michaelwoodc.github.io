@@ -98,7 +98,7 @@
   
   @media only screen and (max-width: 1000px) {
     .responsive {
-      width: 50%;
+      width: 100%;
       margin: 6px 0;
     }
   }
@@ -118,7 +118,7 @@
   p.project-introduction {
     background-color: #cac6c6; /* Light gray background color */
     border-radius: 8px; /* Rounded corners */
-    padding: 20px 400px 20px 20px; /* Padding: top right bottom left */
+    padding: 20px 40px 20px 20px; /* Padding: top right bottom left */
     font-family: 'Arial', sans-serif; /* Use your preferred font */
     font-size: 16px;
     line-height: 1.5;
