@@ -169,3 +169,30 @@ p {
   border: none;
   border-radius: 4px;
 }
+
+/* Box styling */
+#codeBox2 {
+  min-height: 80px;
+  position: relative;
+  border: 3px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+/* Updated styling for the code block */
+#codeBlock2 {
+  display: inline-block;
+  padding: 10px;
+  margin: 0;
+}
+/* Optional styling for the button */
+#copyButton2 {
+  /* bottom: 5px; */
+  right: 10px;
+  cursor: pointer;
+  position: relative;
+  padding: 8px 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}

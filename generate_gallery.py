@@ -17,8 +17,8 @@ def generate_gallery_html(start_number, end_number, directory):
 
 # Set your desired range and directory
 start_number = 1
-end_number = 26
-image_directory = "media\\akeebabackup"
+end_number = 20
+image_directory = "media\\installxampp"
 
 # Generate and print the HTML code
 generate_gallery_html(start_number, end_number, image_directory)
