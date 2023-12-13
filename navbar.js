@@ -22,24 +22,19 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Function to copy code to clipboard
-function copyCodeToClipboard() {
-    // Get the code block element
-    var codeBlock = document.getElementById("codeBlock");
-    // Create a range and select the code
-    var range = document.createRange();
-    range.selectNode(codeBlock);
-    window.getSelection().removeAllRanges();
-    window.getSelection().addRange(range);
-    // Execute the copy command
-    document.execCommand("copy");
-    // Deselect the text
-    window.getSelection().removeAllRanges();
-    // Update button text
-    var copyButton = document.getElementById("copyButton");
-    copyButton.innerText = "Code Copied!";
-    setTimeout(function() {
-        copyButton.innerText = "Copy Code";
-    }, 2000); // Reset button text after 2 seconds
+function copyCode(event) {
+    const codeBlock = event.target.previousElementSibling;
+    const codeText = codeBlock.textContent || codeBlock.innerText;
+    const tempTextArea = document.createElement('textarea');
+    tempTextArea.value = codeText;
+    document.body.appendChild(tempTextArea);
+    tempTextArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempTextArea);
+    alert('Code has been copied to clipboard');
 }
-// Add click event listener to the copy button
-document.getElementById("copyButton").addEventListener("click", copyCodeToClipboard);
+// Add click event listeners to the copy buttons
+const copyButtons = document.querySelectorAll('.copy-button');
+copyButtons.forEach(button => {
+    button.addEventListener('click', copyCode);
+});

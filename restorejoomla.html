@@ -11,7 +11,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="mystyle.css">
-        <script src="navbar.js"></script>
+        
     </head>
     <body>
     <!-- Container for the navbar -->
@@ -85,16 +85,15 @@
           <a target="_blank" href="media\restorejoomla\07.jpeg">
             <img src="media\restorejoomla\07.jpeg" alt="Image 7">
           </a>
-          <div class="desc">This portion MUST be done in a nautilus window with sudo priviliges.  If you do not have one open, run:</div>
+          <div class="desc">This portion MUST be done in a nautilus window with sudo priviliges!</div>
         </div>
       </div>
-      <div id="codeBox">
-        <code id="codeBlock">
-sudo nautilus
-        </code>
 
-        <!-- Copy Code Button -->
-        <button id="copyButton">Copy Code</button>
+      <div class="code-section">
+        <textarea rows="2" cols="40" class="code">
+sudo nautilus
+        </textarea>
+        <button class="copy-button">Copy Code</button>
     </div>
 
     <script src="navbar.js"></script>
@@ -360,5 +359,6 @@ sudo nautilus
       
 
       </div>
+      <script src="navbar.js"></script>
     </body>
 </html>
