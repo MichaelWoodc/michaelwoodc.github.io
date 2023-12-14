@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/mystyle.css">
+    </head>
+    <body>
+    <!-- Container for the navbar -->
+    <div id="navbarContainer"></div>
+    <!-- Include the navbar using JavaScript -->
+    <script src="../js/navbar.js"></script>
+    
+
+    <div class="code-section">
+      <textarea rows="4" cols="40" class="code">
+sudo apt update && sudo apt upgrade -y
+sudo apt install realmd sssd sssd-tools libnss-sss libpam-sss adcli samba-common-bin oddjob oddjob-mkhomedir packagekit adcli libsss-sudo libsasl2-modules-ldap
+sudo realm join it.net
+      </textarea>
+      <button class="copy-button">Copy Code</button>
+  </div>
+
+    <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="addtoad\01.jpeg"> 
+            <img src="addtoad\01.jpeg" alt="Image 1">
+          </a>
+          <div class="desc">Update everything! </div>      
+        </div>
+      </div>
+      
+      
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="addtoad\02.jpeg">
+            <img src="addtoad\02.jpeg" alt="Image 2">
+          </a>
+          <div class="desc"> Install dependencies </div>
+        </div>
+      </div>
+      
+      
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="addtoad\03.jpeg">
+            <img src="addtoad\03.jpeg" alt="Image 3">
+          </a>
+          <div class="desc"> Join the realm </div>
+        </div>
+      </div>
+      
+      
+<p>
+  Now, you can check if it was successful by running:
+</p>
+<div class="code-section">
+  <textarea rows="4" cols="40" class="code">
+realm list
+  </textarea>
+  <button class="copy-button">Copy Code</button>
+</div>     
+  
+
+      </div>
+      <script src="navbar.js"></script>
+    </body>
+</html>
