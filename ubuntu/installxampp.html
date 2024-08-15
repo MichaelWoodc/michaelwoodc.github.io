@@ -1,255 +1,627 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../css/mystyle.css">
-    </head>
-    <body>
-    <!-- Container for the navbar -->
-    <div id="navbarContainer"></div>
-    <!-- Include the navbar using JavaScript -->
-    <script src="../js/navbar.js"></script>
-    <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="installxampp\01.jpeg"> 
-            <img src="installxampp\01.jpeg" alt="Image 1">
-          </a>
-          <div class="desc"> Download XAMPP</div>     
-        </div>
-      </div>
-      
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="installxampp\02.jpeg">
-            <img src="installxampp\02.jpeg" alt="Image 2">
-          </a>
-          <div class="desc">Place it on your desktop and rename it: xampp-installer.run </div>
-        </div>
-      </div>
-      
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="installxampp\03.jpeg">
-            <img src="installxampp\03.jpeg" alt="Image 3">
-          </a>
-          <div class="desc"> Right click and open desktop in terminal </div>
-        </div>
-      </div>
-      We must run a few commands from terminal:
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/mystyle.css"> <!-- Adjust the path to the CSS file as well -->
+    <style>
+      .prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 34px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.8);
+}
 
-      <div class="code-section">
-        <textarea rows="2" cols="40" class="code">
-chmod 755 xampp-installer.run
-sudo ./xampp-installer.run
-        </textarea>
-        <button class="copy-button">Copy Code</button>
-    </div>
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="installxampp\04.jpeg">
-            <img src="installxampp\04.jpeg" alt="Image 4">
-          </a>
-          <div class="desc">Complete the graphical install wizard</div>
-        </div>
-      </div>
-      
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="installxampp\05.jpeg">
-            <img src="installxampp\05.jpeg" alt="Image 5">
-          </a>
-          <div class="desc">   </div>
-        </div>
-      </div>
-      
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="installxampp\06.jpeg">
-            <img src="installxampp\06.jpeg" alt="Image 6">
-          </a>
-          <div class="desc">   </div>
-        </div>
-      </div>
-      
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="installxampp\07.jpeg">
-            <img src="installxampp\07.jpeg" alt="Image 7">
-          </a>
-          <div class="desc"> </div>
-        </div>
-      </div>
-      
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="installxampp\08.jpeg">
-            <img src="installxampp\08.jpeg" alt="Image 8">
-          </a>
-          <div class="desc">The installer tends to appear stuck at 73-74%, and again at 100%.  Please be patient, it is working, it just takes a while. </div>
-        </div>
-      </div>
-      
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="installxampp\09.jpeg">
-            <img src="installxampp\09.jpeg" alt="Image 9">
-          </a>
-          <div class="desc"> </div>
-        </div>
-      </div>
-      
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="installxampp\10.jpeg">
-            <img src="installxampp\10.jpeg" alt="Image 10">
-          </a>
-          <div class="desc"> </div>
-        </div>
-      </div>
-      
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="installxampp\11.jpeg">
-            <img src="installxampp\11.jpeg" alt="Image 11">
-          </a>
-          <div class="desc">Explore the control panel</div>
-        </div>
-      </div>
-      
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="installxampp\12.jpeg">
-            <img src="installxampp\12.jpeg" alt="Image 12">
-          </a>
-          <div class="desc">If you observe any errors, you need to install nettools: </div>
-        </div>
-      </div>
-      <div class="code-section">
-        <textarea rows="2" cols="40" class="code">
-sudo apt install net-tools
-        </textarea>
-        <button class="copy-button">Copy Code</button>
-    </div>
-      
-      <!-- <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="installxampp\13.jpeg">
-            <img src="installxampp\13.jpeg" alt="Image 13">
-          </a>
-          <div class="desc">   </div>
-        </div>
-      </div> -->
-      
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="installxampp\14.jpeg">
-            <img src="installxampp\14.jpeg" alt="Image 14">
-          </a>
-          <div class="desc">Now we can start XAMPP</div>
-        </div>
-      </div>
-      
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="installxampp\15.jpeg">
-            <img src="installxampp\15.jpeg" alt="Image 15">
-          </a>
-          <div class="desc"> </div>
-        </div>
-      </div>
-      
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="installxampp\16.jpeg">
-            <img src="installxampp\16.jpeg" alt="Image 16">
-          </a>
-          <div class="desc">Navigate to localhost in your browser to test your installation </div>
-        </div>
-      </div>
-      
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="installxampp\17.jpeg">
-            <img src="installxampp\17.jpeg" alt="Image 17">
-          </a>
-          <div class="desc"> To start a graphical control panel, you can run: sudo./manager-linux-x64.run </div>
-        </div>
-      </div>
-      
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="installxampp\18.jpeg">
-            <img src="installxampp\18.jpeg" alt="Image 18">
-          </a>
-          <div class="desc"></div>
-        </div>
-      </div>
-      
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="installxampp\19.jpeg">
-            <img src="installxampp\19.jpeg" alt="Image 19">
-          </a>
-          <div class="desc">Similar to WAMP, you can easily access the relevant .conf files from the control panel.  None required editing for my installation</div>
-        </div>
-      </div>
-      
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="installxampp\20.jpeg">
-            <img src="installxampp\20.jpeg" alt="Image 20">
-          </a>
-          <div class="desc"></div>
-        </div>
-      </div>
-    <script src="navbar.js"></script>
-
-    <p>
-It is also a good idea to go ahead and open the XAMPP ports here, we can open the ports in the firewall using:
-    </p>
+/* Position the "next button" to the right */
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* Position the "next button" to the right */
+.next {
+  /* margin-left: auto;
+  margin-right: auto; */
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+  </style>
+</head>
+</head>
+<body>
+  <div id="navbar-container"></div>
+<!-- Slideshow container -->
+<p>Keep these commands for future use, as they can start the XAMPP services and control panel, respectively.  The xampp manager also provides us easy access to edit the .conf files:
+  <ol>
+    <li>sudo /opt/lampp/lampp start</li>
+    <li>sudo /opt/lampp/manager-linux-x64.run</li>
+  </ol>
+</p>
+<h2>Installing XAMPP</h2>
+<div class="center">
+<div class="slideshow-container">
+  <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+<div class="numbertext">1 / 24</div>
+<!-- Wrap the image in an anchor tag with a target attribute -->
+<a href="./1_install_xampp_create_database/01.jpeg" target="_blank">
+  <img src="./1_install_xampp_create_database/01.jpeg" style="width:100%">
+</a>
+<div class="text-section">
+  <p>
+    Step 1<br>      <br>Before beginning any lab, it is always best to create a VM snapshot!<br>
+    VM > Snapshot > Take Snapshot<br>Before opening up our browswer to download XAMPP <br>
+    let's make sure we have net tools installed open a terminal and run
+  </p>
+</div>
 <div class="code-section">
-  <textarea rows="4" cols="40" class="code">
-sudo ufw allow 80/tcp
-sudo ufw allow 3306/tcp
+  <textarea rows="4" class="textbox code">
+sudo apt update && sudo apt upgrade -y 
+sudo apt install net-tools
   </textarea>
-  <button class="copy-button">Copy Code</button>
-</div>  
+  <button class="copy-button" onclick="copyCode(1)">Copy Code</button>
+</div>
+</div>
 
-<p>
-Keep this command handy, to start the xampp control panel
-      </p>
-  <div class="code-section">
-    <textarea rows="4" cols="40" class="code">
-sudo /opt/lampp/manager-linux-x64.run
-    </textarea>
-    <button class="copy-button">Copy Code</button>
-  </div>  
+  <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+<div class="numbertext">2 / 24</div>
+<!-- Wrap the image in an anchor tag with a target attribute -->
+<a href="./1_install_xampp_create_database/02.jpeg" target="_blank">
+  <img src="./1_install_xampp_create_database/02.jpeg" style="width:100%">
+</a>
+<div class="text-section">
+  <p>
+    Step 2
+  </p>
+</div>
+<div class="code-section">
+  <textarea rows="4" class="textbox code">
 
+  </textarea>
+  <button class="copy-button" onclick="copyCode(2)">Copy Code</button>
+</div>
+</div>
+
+  <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+<div class="numbertext">3 / 24</div>
+<!-- Wrap the image in an anchor tag with a target attribute -->
+<a href="./1_install_xampp_create_database/03.jpeg" target="_blank">
+  <img src="./1_install_xampp_create_database/03.jpeg" style="width:100%">
+</a>
+<div class="text-section">
+  <p>
+    Step 3
+  </p>
+</div>
+<div class="code-section">
+  <textarea rows="4" class="textbox code">
+
+  </textarea>
+  <button class="copy-button" onclick="copyCode(3)">Copy Code</button>
+</div>
+</div>
+
+  <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+<div class="numbertext">4 / 24</div>
+<!-- Wrap the image in an anchor tag with a target attribute -->
+<a href="./1_install_xampp_create_database/04.jpeg" target="_blank">
+  <img src="./1_install_xampp_create_database/04.jpeg" style="width:100%">
+</a>
+<div class="text-section">
+  <p>
+    Step 4
+  </p>
+</div>
+<div class="code-section">
+  <textarea rows="4" class="textbox code">
+
+  </textarea>
+  <button class="copy-button" onclick="copyCode(4)">Copy Code</button>
+</div>
+</div>
+
+  <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+<div class="numbertext">5 / 24</div>
+<!-- Wrap the image in an anchor tag with a target attribute -->
+<a href="./1_install_xampp_create_database/05.jpeg" target="_blank">
+  <img src="./1_install_xampp_create_database/05.jpeg" style="width:100%">
+</a>
+<div class="text-section">
+  <p>
+    Step 5
+  </p>
+</div>
+<div class="code-section">
+  <textarea rows="4" class="textbox code">
+
+  </textarea>
+  <button class="copy-button" onclick="copyCode(5)">Copy Code</button>
+</div>
+</div>
+
+  <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+<div class="numbertext">6 / 24</div>
+<!-- Wrap the image in an anchor tag with a target attribute -->
+<a href="./1_install_xampp_create_database/06.jpeg" target="_blank">
+  <img src="./1_install_xampp_create_database/06.jpeg" style="width:100%">
+</a>
+<div class="text-section">
+  <p>
+    Step 6
+  </p>
+</div>
+<div class="code-section">
+  <textarea rows="4" class="textbox code">
+
+  </textarea>
+  <button class="copy-button" onclick="copyCode(6)">Copy Code</button>
+</div>
+</div>
+
+  <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+<div class="numbertext">7 / 24</div>
+<!-- Wrap the image in an anchor tag with a target attribute -->
+<a href="./1_install_xampp_create_database/07.jpeg" target="_blank">
+  <img src="./1_install_xampp_create_database/07.jpeg" style="width:100%">
+</a>
+<div class="text-section">
+  <p>
+    Step 7
+  </p>
+</div>
+<div class="code-section">
+  <textarea rows="4" class="textbox code">
+
+  </textarea>
+  <button class="copy-button" onclick="copyCode(7)">Copy Code</button>
+</div>
+</div>
+
+  <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+<div class="numbertext">8 / 24</div>
+<!-- Wrap the image in an anchor tag with a target attribute -->
+<a href="./1_install_xampp_create_database/08.jpeg" target="_blank">
+  <img src="./1_install_xampp_create_database/08.jpeg" style="width:100%">
+</a>
+<div class="text-section">
+  <p>
+    Step 8
+  </p>
+</div>
+<div class="code-section">
+  <textarea rows="4" class="textbox code">
+
+  </textarea>
+  <button class="copy-button" onclick="copyCode(8)">Copy Code</button>
+</div>
+</div>
+
+  <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+<div class="numbertext">9 / 24</div>
+<!-- Wrap the image in an anchor tag with a target attribute -->
+<a href="./1_install_xampp_create_database/09.jpeg" target="_blank">
+  <img src="./1_install_xampp_create_database/09.jpeg" style="width:100%">
+</a>
+<div class="text-section">
+  <p>
+    Step 9 <br>
+    Rename it something simple! 
+  </p>
+</div>
+<div class="code-section">
+  <textarea rows="4" class="textbox code">
+
+  </textarea>
+  <button class="copy-button" onclick="copyCode(9)">Copy Code</button>
+</div>
+</div>
+
+  <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+<div class="numbertext">10 / 24</div>
+<!-- Wrap the image in an anchor tag with a target attribute -->
+<a href="./1_install_xampp_create_database/10.jpeg" target="_blank">
+  <img src="./1_install_xampp_create_database/10.jpeg" style="width:100%">
+</a>
+<div class="text-section">
+  <p>
+    Step 10<br>
+    Right click anywhere on desktop and "Open in terminal"
+  </p>
+</div>
+<div class="code-section">
+  <textarea rows="4" class="textbox code">
+
+  </textarea>
+  <button class="copy-button" onclick="copyCode(10)">Copy Code</button>
+</div>
+</div>
+
+  <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+<div class="numbertext">11 / 24</div>
+<!-- Wrap the image in an anchor tag with a target attribute -->
+<a href="./1_install_xampp_create_database/11.jpeg" target="_blank">
+  <img src="./1_install_xampp_create_database/11.jpeg" style="width:100%">
+</a>
+<div class="text-section">
+  <p>
+    Step 11<br>
+    chmod will change execute permissions, allowing us to install it later
+  </p>
+</div>
+<div class="code-section">
+  <textarea rows="4" class="textbox code">
+chmod 755 xampp-installer.run
+  </textarea>
+  <button class="copy-button" onclick="copyCode(11)">Copy Code</button>
+</div>
+</div>
+
+  <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+<div class="numbertext">12 / 24</div>
+<!-- Wrap the image in an anchor tag with a target attribute -->
+<a href="./1_install_xampp_create_database/12.jpeg" target="_blank">
+  <img src="./1_install_xampp_create_database/12.jpeg" style="width:100%">
+</a>
+<div class="text-section">
+  <p>
+    Step 12<br>
+    we can also confirm privileges
+  </p>
+</div>
+<div class="code-section">
+  <textarea rows="4" class="textbox code">
+ls -l xampp-installer.run
+  </textarea>
+  <button class="copy-button" onclick="copyCode(12)">Copy Code</button>
+</div>
+</div>
+
+  <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+<div class="numbertext">13 / 24</div>
+<!-- Wrap the image in an anchor tag with a target attribute -->
+<a href="./1_install_xampp_create_database/13.jpeg" target="_blank">
+  <img src="./1_install_xampp_create_database/13.jpeg" style="width:100%">
+</a>
+<div class="text-section">
+  <p>
+    Step 13 <br> Run the installer
+  </p>
+</div>
+<div class="code-section">
+  <textarea rows="4" class="textbox code">
+sudo ./xampp-installer.run
+  </textarea>
+  <button class="copy-button" onclick="copyCode(13)">Copy Code</button>
+</div>
+</div>
+
+  <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+<div class="numbertext">14 / 24</div>
+<!-- Wrap the image in an anchor tag with a target attribute -->
+<a href="./1_install_xampp_create_database/14.jpeg" target="_blank">
+  <img src="./1_install_xampp_create_database/14.jpeg" style="width:100%">
+</a>
+<div class="text-section">
+  <p>
+    Step 14
+  </p>
+</div>
+<div class="code-section">
+  <textarea rows="4" class="textbox code">
+
+  </textarea>
+  <button class="copy-button" onclick="copyCode(14)">Copy Code</button>
+</div>
+</div>
+
+  <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+<div class="numbertext">15 / 24</div>
+<!-- Wrap the image in an anchor tag with a target attribute -->
+<a href="./1_install_xampp_create_database/15.jpeg" target="_blank">
+  <img src="./1_install_xampp_create_database/15.jpeg" style="width:100%">
+</a>
+<div class="text-section">
+  <p>
+    Step 15
+  </p>
+</div>
+<div class="code-section">
+  <textarea rows="4" class="textbox code">
+
+  </textarea>
+  <button class="copy-button" onclick="copyCode(15)">Copy Code</button>
+</div>
+</div>
+
+  <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+<div class="numbertext">16 / 24</div>
+<!-- Wrap the image in an anchor tag with a target attribute -->
+<a href="./1_install_xampp_create_database/16.jpeg" target="_blank">
+  <img src="./1_install_xampp_create_database/16.jpeg" style="width:100%">
+</a>
+<div class="text-section">
+  <p>
+    Step 16
+  </p>
+</div>
+<div class="code-section">
+  <textarea rows="4" class="textbox code">
+
+  </textarea>
+  <button class="copy-button" onclick="copyCode(16)">Copy Code</button>
+</div>
+</div>
+
+  <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+<div class="numbertext">17 / 24</div>
+<!-- Wrap the image in an anchor tag with a target attribute -->
+<a href="./1_install_xampp_create_database/17.jpeg" target="_blank">
+  <img src="./1_install_xampp_create_database/17.jpeg" style="width:100%">
+</a>
+<div class="text-section">
+  <p>
+    Step 17<br>
+    XAMPP appears stuck here, and again at 100%.<br>
+    Please be patient!
+  </p>
+</div>
+<div class="code-section">
+  <textarea rows="4" class="textbox code">
+
+  </textarea>
+  <button class="copy-button" onclick="copyCode(17)">Copy Code</button>
+</div>
+</div>
+
+  <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+<div class="numbertext">18 / 24</div>
+<!-- Wrap the image in an anchor tag with a target attribute -->
+<a href="./1_install_xampp_create_database/18.jpeg" target="_blank">
+  <img src="./1_install_xampp_create_database/18.jpeg" style="width:100%">
+</a>
+<div class="text-section">
+  <p>
+    Step 18<br>
+    XAMPP appears stuck here<br>
+    Please be patient!
+  </p>
+</div>
+<div class="code-section">
+  <textarea rows="4" class="textbox code">
+
+  </textarea>
+  <button class="copy-button" onclick="copyCode(18)">Copy Code</button>
+</div>
+</div>
+
+  <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+<div class="numbertext">19 / 24</div>
+<!-- Wrap the image in an anchor tag with a target attribute -->
+<a href="./1_install_xampp_create_database/19.jpeg" target="_blank">
+  <img src="./1_install_xampp_create_database/19.jpeg" style="width:100%">
+</a>
+<div class="text-section">
+  <p>
+    Step 19
+  </p>
+</div>
+<div class="code-section">
+  <textarea rows="4" class="textbox code">
+
+  </textarea>
+  <button class="copy-button" onclick="copyCode(19)">Copy Code</button>
+</div>
+</div>
+
+  <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+<div class="numbertext">20 / 24</div>
+<!-- Wrap the image in an anchor tag with a target attribute -->
+<a href="./1_install_xampp_create_database/20.jpeg" target="_blank">
+  <img src="./1_install_xampp_create_database/20.jpeg" style="width:100%">
+</a>
+<div class="text-section">
+  <p>
+    Step 20
+  </p>
+</div>
+<div class="code-section">
+  <textarea rows="4" class="textbox code">
+
+  </textarea>
+  <button class="copy-button" onclick="copyCode(20)">Copy Code</button>
+</div>
+</div>
+
+  <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+<div class="numbertext">21 / 24</div>
+<!-- Wrap the image in an anchor tag with a target attribute -->
+<a href="./1_install_xampp_create_database/21.jpeg" target="_blank">
+  <img src="./1_install_xampp_create_database/21.jpeg" style="width:100%">
+</a>
+<div class="text-section">
+  <p>
+    Step 21 <br>
+    PLEASE keep this area of the XAMPP control panel in mind <br>
+    if changes are required to the .conf files <br>
+    We should have no issues starting all servers<br>
+    UNLESS you have not installed net tools
+  </p>
+</div>
+<div class="code-section">
+  <textarea rows="4" class="textbox code">
+sudo apt update && sudo apt upgrade -y 
+sudo apt install net-tools
+  </textarea>
+  <button class="copy-button" onclick="copyCode(21)">Copy Code</button>
+</div>
+</div>
+
+  <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+<div class="numbertext">22 / 24</div>
+<!-- Wrap the image in an anchor tag with a target attribute -->
+<a href="./1_install_xampp_create_database/22.jpeg" target="_blank">
+  <img src="./1_install_xampp_create_database/22.jpeg" style="width:100%">
+</a>
+<div class="text-section">
+  <p>
+    Step 22<br>
+    <br>
+    Navigate to localhost then phpMyAdmin
+  </p>
+</div>
+<div class="code-section">
+  <textarea rows="4" class="textbox code">
+
+  </textarea>
+  <button class="copy-button" onclick="copyCode(22)">Copy Code</button>
+</div>
+</div>
+
+  <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+<div class="numbertext">23 / 24</div>
+<!-- Wrap the image in an anchor tag with a target attribute -->
+<a href="./1_install_xampp_create_database/23.jpeg" target="_blank">
+  <img src="./1_install_xampp_create_database/23.jpeg" style="width:100%">
+</a>
+<div class="text-section">
+  <p>
+    Step 23<br>New
+  </p>
+</div>
+<div class="code-section">
+  <textarea rows="4" class="textbox code">
+
+  </textarea>
+  <button class="copy-button" onclick="copyCode(23)">Copy Code</button>
+</div>
+</div>
+
+  <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+<div class="numbertext">24 / 24</div>
+<!-- Wrap the image in an anchor tag with a target attribute -->
+<a href="./1_install_xampp_create_database/24.jpeg" target="_blank">
+  <img src="./1_install_xampp_create_database/24.jpeg" style="width:100%">
+</a>
+<div class="text-section">
+  <p>
+    Step 24<br>
+    Name the database joomla
+  </p>
+</div>
+<div class="code-section">
+  <textarea rows="4" class="textbox code">
+
+  </textarea>
+  <button class="copy-button" onclick="copyCode(24)">Copy Code</button>
+</div>
+</div>
+
+  <!-- Other slides here -->
+</div>
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <!-- Dots here -->
+</div>
+
+<!-- <script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  let codeBoxes = document.getElementsByClassName("code-section");
+
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+    if (codeBoxes[i]) {
+      codeBoxes[i].style.display = "none";
+    }
+  }
+
+  for (i = 0; dots && i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  if (dots && dots[slideIndex - 1]) {
+    dots[slideIndex - 1].className += " active";
+  }
+
+  if (slides[slideIndex - 1]) {
+    slides[slideIndex - 1].style.display = "block";
+    if (codeBoxes[slideIndex - 1] && codeBoxes[slideIndex - 1].querySelector('textarea').value.trim() !== "") {
+      codeBoxes[slideIndex - 1].style.display = "block";
+    }
+  }
+}
+
+// Function to copy code to clipboard
+function copyCode(slideNumber) {
+  let codeTextarea = document.querySelectorAll('.code-section textarea')[slideNumber - 1];
+  let codeContent = codeTextarea.value.trim();
+
+  if (codeContent !== "") {
+    navigator.clipboard.writeText(codeContent).then(function() {
+      alert('Code copied to clipboard!');
+    }).catch(function(err) {
+      console.error('Unable to copy to clipboard', err);
+    });
+  }
+}
+</script> -->
+</div>
+<script src="../script.js" async defer></script>
 </body>
 </html>

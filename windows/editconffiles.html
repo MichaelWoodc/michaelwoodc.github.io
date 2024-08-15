@@ -1,27 +1,17 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href=".././css/mystyle.css">
+    <link rel="stylesheet" href="../css/mystyle.css"> <!-- Adjust the path to the CSS file as well -->
 </head>
 <body>
-    <!-- Container for the navbar -->
-    <div id="navbarContainer"></div>
-    <!-- Include the navbar using JavaScript -->
-    <script src=".././js/navbar.js"></script>
+    <div id="navbar-container"></div>
 
-
-    <div id="navbarContainer"></div>
     <!-- Include the navbar using JavaScript -->
-    <script src="navbar.js"></script>
 
     <p>
         If you haven't already done so I suggest that you right click on the taskbar, and go to taskbar settings.  Under "Notification area" you can "Select which icons appear on the taskbar".  I suggest you disable those you don't use, and enable wamp, it should start with aetray or something similar.
@@ -32,14 +22,14 @@
     <div class="responsive">
         <div class="gallery">
           <a target="_blank" href="configurewamp\01.jpeg">
-            <img src="configurewamp\01.jpeg" alt="Cinque Terre">
+            <img src="configurewamp\01.jpeg" alt="Cinque Terre" class="center">
           </a>
           <div class="desc">Click on WAMP in the system tray.  If yours isn't visible already, it may be beneficial to follow the above suggestions.</div>
         </div>
       </div>
       <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="configurewamp\02.jpeg">
+          <a target="_blank" href="configurewamp\02.jpeg"class="center">
             <img src="configurewamp\02.jpeg" alt="Cinque Terre">
           </a>
           <div class="desc">Edit the httpd.conf file <br><br> </div>
@@ -48,7 +38,7 @@
       <div class="responsive">
         <div class="gallery">
           <a target="_blank" href="configurewamp\03.jpeg">
-            <img src="configurewamp\03.jpeg" alt="Cinque Terre">
+            <img src="configurewamp\03.jpeg" alt="Cinque Terre"class="center">
           </a>
           <div class="desc">Find and edit the lines pertaining to the "Directory" section and ensure you are granting access to all, and allowing all to override.</div>
         </div>
@@ -56,7 +46,7 @@
       <div class="responsive">
         <div class="gallery">
           <a target="_blank" href="configurewamp\04.jpeg">
-            <img src="configurewamp\04.jpeg" alt="Cinque Terre">
+            <img src="configurewamp\04.jpeg" alt="Cinque Terre"class="center">
           </a>
           <div class="desc">We need to make similar changes to the remaining .conf files
             <br>
@@ -67,7 +57,7 @@
       <div class="responsive">
         <div class="gallery">
           <a target="_blank" href="configurewamp\05.jpeg">
-            <img src="configurewamp\05.jpeg" alt="Cinque Terre">
+            <img src="configurewamp\05.jpeg" alt="Cinque Terre"class="center">
           </a>
           <div class="desc">Pictured: httpd-vhosts.conf file editing.  Yours should look like this.</div>
         </div>
@@ -75,7 +65,7 @@
       <div class="responsive">
         <div class="gallery">
           <a target="_blank" href="configurewamp\06.jpeg">
-            <img src="configurewamp\06.jpeg" alt="Cinque Terre">
+            <img src="configurewamp\06.jpeg" alt="Cinque Terre"class="center">
           </a>
           <div class="desc">We will have to edit one more file!  </div>
         </div>
@@ -83,7 +73,7 @@
       <div class="responsive">
         <div class="gallery">
           <a target="_blank" href="configurewamp\07.jpeg">
-            <img src="configurewamp\07.jpeg" alt="Cinque Terre">
+            <img src="configurewamp\07.jpeg" alt="Cinque Terre"class="center">
           </a>
           <div class="desc">Select the php.ini file for editing</div>
         </div>
@@ -92,7 +82,7 @@
       <div class="responsive">
         <div class="gallery">
           <a target="_blank" href="configurewamp\08.jpeg">
-            <img src="configurewamp\08.jpeg" alt="Cinque Terre">
+            <img src="configurewamp\08.jpeg" alt="Cinque Terre"class="center">
           </a>
           <div class="desc">Here, we want to change the max upload sizes for everything to work properly in the event that your future JOOMLA templates or other files exceed the current maximum values</div>
         </div>
@@ -100,12 +90,12 @@
       <div class="responsive">
         <div class="gallery">
           <a target="_blank" href="configurewamp\09.jpeg">
-            <img src="configurewamp\09.jpeg" alt="Cinque Terre">
+            <img src="configurewamp\09.jpeg" alt="Cinque Terre"class="center">
           </a>
           <div class="desc">Make sure to comment any changes!  Upon completion you will have to restart WAMP.  If you encounter any errors, the WAMP menu includes functionality to verify the syntax of your recently edited files.  </div>
         </div>
         </div>
         
-    
+        <script src="../script.js" async defer></script>
     </body>
 </html>

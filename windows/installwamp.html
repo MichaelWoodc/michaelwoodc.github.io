@@ -1,96 +1,40 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href=".././css/mystyle.css">
+    <link rel="stylesheet" href="../css/mystyle.css"> <!-- Adjust the path to the CSS file as well -->
 </head>
 <body>
-    <!-- Container for the navbar -->
-    <div id="navbarContainer"></div>
-    <!-- Include the navbar using JavaScript -->
-    <script src=".././js/navbar.js"></script>
+    <div id="navbar-container"></div>
+<h2>Installing Wamp server</h2>
+    <p>
+    <ol>
+        <li> <a href="https://wampserver.aviatechno.net/files/vcpackages/all_vc_redist_x86_x64.zip">Download all dependencies and install</a>
+            <ul>
+                <li>All vcredist packages</li>
+            </ul></li>
+        <li><a href="https://wampserver.aviatechno.net/files/tools/check_vcredist.exe">Check to make sure all dependencies are installed</a></li>
+        <li><a href="https://sourceforge.net/projects/wampserver/files/WampServer%203/WampServer%203.0.0/wampserver3.3.2_x64.exe/download">Download and install Wamp Server</a></li>
+    </ol>
 
-        
-        <div class="responsive">
-            <div class="gallery">
-              <a target="_blank" href="installwamp\01.jpeg">
-                <img src="installwamp\01.jpeg" alt="Cinque Terre">
-              </a>
-              <div class="desc">Drag and drop your wamp zip folder into your VM</div>
-            </div>
-          </div>
-          <div class="responsive">
-            <div class="gallery">
-              <a target="_blank" href="installwamp\02.jpeg">
-                <img src="installwamp\02.jpeg" alt="Cinque Terre">
-              </a>
-              <div class="desc">The process will take a few seconds</div>
-            </div>
-          </div>    
-          <div class="responsive">
-            <div class="gallery">
-              <a target="_blank" href="installwamp\03.jpeg">
-                <img src="installwamp\03.jpeg" alt="Cinque Terre">
-              </a>
-              <div class="desc"></div>
-            </div>
-          </div>    
-          <div class="responsive">
-            <div class="gallery">
-              <a target="_blank" href="installwamp\04.jpeg">
-                <img src="installwamp\04.jpeg" alt="Cinque Terre">
-              </a>
-              <div class="desc">Extract the folder here</div>
-            </div>
-          </div>    
-          <div class="responsive">
-            <div class="gallery">
-              <a target="_blank" href="installwamp\05.jpeg">
-                <img src="installwamp\05.jpeg" alt="Cinque Terre">
-              </a>
-              <div class="desc"></div>
-            </div>
-          </div>    
-          <div class="responsive">
-            <div class="gallery">
-              <a target="_blank" href="installwamp\06.jpeg">
-                <img src="installwamp\06.jpeg" alt="Cinque Terre">
-              </a>
-              <div class="desc">Run the provided .bat file as an administrator</div>
-            </div>
-          </div>    
-          <div class="responsive">
-            <div class="gallery">
-              <a target="_blank" href="installwamp\07.jpeg">
-                <img src="installwamp\07.jpeg" alt="Cinque Terre">
-              </a>
-              <div class="desc">The file executes all required installers and automatically configures windows firewall</div>
-            </div>
-          </div>   
+    Finishing up, you should
+    <ol>
+        <li>Enable WAMP system services (So they autostart on windows logon)
+            <ul>
+                <li>Search for services in the task bar</li>
+                <li>Click services</li>
+                <li>Find all 3 services starting with "wamp", double click, and set startup type to "Automatic"</li>
+            </ul></li>
+        <li>Create a .bat file to autorun the Wamp manager on startup (Only if desired to autostart the GUI manager)</li>
+        <li>Restart system and test by navigating to localhost.  Everything should work as intended, although it may take some time for the services to start. You can run Wamp to check the status of services.</li>
+    </ol>
+    </p>
 
-          <div class="responsive">
-            <div class="gallery">
-              <a target="_blank" href="installwamp\08.jpeg">
-                <img src="installwamp\08.jpeg" alt="Cinque Terre">
-              </a>
-              <div class="desc">Pictured: The automated process at work</div>
-            </div>
-          </div>
-          <div class="responsive">
-            <div class="gallery">
-              <a target="_blank" href="installwamp\09.jpeg">
-                <img src="installwamp\09.jpeg" alt="Cinque Terre">
-              </a>
-              <div class="desc">The VM will automatically reboot.  You will likely see a UAC prompt if you have not yet disabled it.</div>
-            </div>
-          
-    </body>
+    Sources: https://wampserver.aviatechno.net/
+    <script src="../script.js" async defer></script>
+</body>
 </html>

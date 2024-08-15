@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/mystyle.css"> <!-- Adjust the path to the CSS file as well -->
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <!-- Include the navbar using JavaScript -->
+<h2>Final checks</h2>
+<p>Some final checks you can perform to help ensure everything works as intended are:</p>
+<ol>
+  <li>Ensure all PCs and users are displayed in Windows Server: Tools>Active Directory Users and Computers.  From here you can find an option that would show you all the computers ever connected to your network </li>
+  <li>Ensure you can access your Windows PC from Ubuntu</li>
+    <ol>
+      <li>Get the IP address of your windows PC using ipconfig</li>
+      <li> On Ubuntu, place the address in your browser.  If it doesn't work, check WAMP services, .conf files (to allow remote access),     Windows firewall ports (you can disable it entirely for testing purposes), and the URL</li>
+      <li>Note: after connecting both PCs to AD, you will likely need your Windows Server running for them to network properly</li>
+    </ol>
+  <li>Ensure both your Ubuntu and Windows 10 PCs can access the internet (showing your DNS & DHCP are all configured properly) </li>
+  <li>Ensure your Joomla installation is customized and everything is backed up and restored on XAMPP</li>
+  
+  <!-- <li>On windows, log into the domain with the Windows Server Administrator username and password, ensuring</li> NOT NEEDED IF CHECKING FOM WIN SERVER -->
+</ol>
+<p><a href="./media\documents\Hard Drive Assignment-Schema.pdf">View Project Grading Schema</a></p>
+    
+      <script src="./script.js" async defer></script>
+    </body>
+</html>

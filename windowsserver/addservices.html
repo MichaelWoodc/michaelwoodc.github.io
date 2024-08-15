@@ -1,108 +1,630 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href=".././css/mystyle.css">
+    <link rel="stylesheet" href="../css/mystyle.css"> <!-- Adjust the path to the CSS file as well -->
+<style>
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 40%;
+width: auto;
+margin-top: -22px;
+padding: 16px;
+color: white;
+font-weight: bold;
+font-size: 34px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
+background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Position the "next button" to the right */
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* Position the "next button" to the right */
+.next {
+  /* margin-left: auto;
+  margin-right: auto; */
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.next:hover {
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+</style>
 </head>
 <body>
-    <!-- Container for the navbar -->
-    <div id="navbarContainer"></div>
+    <div id="navbar-container"></div>
     <!-- Include the navbar using JavaScript -->
-    <script src=".././js/navbar.js"></script>
+      <!-- Slideshow container -->
+      <div class="center">
+  <div class="slideshow-container">
 
-    <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="addservices\1.jpeg">   
-            <img src="addservices\1.jpeg" alt="Image 1">  
-          </a>
-          <div class="desc">  </div>
-        </div>
-      </div>
-      
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="addservices\2.jpeg">
-            <img src="addservices\2.jpeg" alt="Image 2">
-          </a>
-          <div class="desc">  </div>
-        </div>
-      </div>
-      
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="addservices\3.jpeg">
-            <img src="addservices\3.jpeg" alt="Image 3">
-          </a>
-          <div class="desc">  </div>
-        </div>
-      </div>
-      
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="addservices\4.jpeg">
-            <img src="addservices\4.jpeg" alt="Image 4">
-          </a>
-          <div class="desc">  </div>
-        </div>
-      </div>
-      
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="addservices\5.jpeg">
-            <img src="addservices\5.jpeg" alt="Image 5">
-          </a>
-          <div class="desc">  </div>
-        </div>
-      </div>
-      
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="addservices\6.jpeg">
-            <img src="addservices\6.jpeg" alt="Image 6">
-          </a>
-          <div class="desc">  </div>
-        </div>
-      </div>
-      
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="addservices\7.jpeg">
-            <img src="addservices\7.jpeg" alt="Image 7">
-          </a>
-          <div class="desc">  </div>
-        </div>
-      </div>
-      
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="addservices\8.jpeg">
-            <img src="addservices\8.jpeg" alt="Image 8">
-          </a>
-          <div class="desc">  </div>
-        </div>
-      </div>
-      
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="addservices\9.jpeg">
-            <img src="addservices\9.jpeg" alt="Image 9">
-          </a>
-          <div class="desc">  </div>
-        </div>
-      </div>
-    <!-- Add other gallery elements as needed -->
+    <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+  <div class="numbertext">1 / 28</div>
+  <!-- Wrap the image in an anchor tag with a target attribute -->
+  <a href="01.jpeg" target="_blank">
+    <img src="../windowsserver/2_add_services/01.jpeg" style="width:100%">
+  </a>
+  <div class="text-section">
+    <p>
+      Step 1<br>
+      In the upper right hand corner of the server manager,<br>
+      click "Tools"
+    </p>
+  </div>
+<div class="code-section">
+    <textarea rows="4" class="textbox code">
 
-</body>
+    </textarea>
+    <button class="copy-button" onclick="copyCode(1)">Copy Code</button>
+  </div>
+</div>
+
+    <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+  <div class="numbertext">2 / 28</div>
+  <!-- Wrap the image in an anchor tag with a target attribute -->
+  <a href="02.jpeg" target="_blank">
+    <img src="../windowsserver/2_add_services/02.jpeg" style="width:100%">
+  </a>
+  <div class="text-section">
+    <p>
+      Step 2
+    </p>
+  </div>
+<div class="code-section">
+    <textarea rows="4" class="textbox code">
+
+    </textarea>
+    <button class="copy-button" onclick="copyCode(2)">Copy Code</button>
+  </div>
+</div>
+
+    <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+  <div class="numbertext">3 / 28</div>
+  <!-- Wrap the image in an anchor tag with a target attribute -->
+  <a href="03.jpeg" target="_blank">
+    <img src="../windowsserver/2_add_services/03.jpeg" style="width:100%">
+  </a>
+  <div class="text-section">
+    <p>
+      Step 3
+    </p>
+  </div>
+<div class="code-section">
+    <textarea rows="4" class="textbox code">
+
+    </textarea>
+    <button class="copy-button" onclick="copyCode(3)">Copy Code</button>
+  </div>
+</div>
+
+    <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+  <div class="numbertext">4 / 28</div>
+  <!-- Wrap the image in an anchor tag with a target attribute -->
+  <a href="04.jpeg" target="_blank">
+    <img src="../windowsserver/2_add_services/04.jpeg" style="width:100%">
+  </a>
+  <div class="text-section">
+    <p>
+      Step 4
+    </p>
+  </div>
+<div class="code-section">
+    <textarea rows="4" class="textbox code">
+
+    </textarea>
+    <button class="copy-button" onclick="copyCode(4)">Copy Code</button>
+  </div>
+</div>
+
+    <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+  <div class="numbertext">5 / 28</div>
+  <!-- Wrap the image in an anchor tag with a target attribute -->
+  <a href="05.jpeg" target="_blank">
+    <img src="../windowsserver/2_add_services/05.jpeg" style="width:100%">
+  </a>
+  <div class="text-section">
+    <p>
+      Step 5
+    </p>
+  </div>
+<div class="code-section">
+    <textarea rows="4" class="textbox code">
+
+    </textarea>
+    <button class="copy-button" onclick="copyCode(5)">Copy Code</button>
+  </div>
+</div>
+
+    <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+  <div class="numbertext">6 / 28</div>
+  <!-- Wrap the image in an anchor tag with a target attribute -->
+  <a href="06.jpeg" target="_blank">
+    <img src="../windowsserver/2_add_services/06.jpeg" style="width:100%">
+  </a>
+  <div class="text-section">
+    <p>
+      Step 6
+    </p>
+  </div>
+<div class="code-section">
+    <textarea rows="4" class="textbox code">
+
+    </textarea>
+    <button class="copy-button" onclick="copyCode(6)">Copy Code</button>
+  </div>
+</div>
+
+    <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+  <div class="numbertext">7 / 28</div>
+  <!-- Wrap the image in an anchor tag with a target attribute -->
+  <a href="07.jpeg" target="_blank">
+    <img src="../windowsserver/2_add_services/07.jpeg" style="width:100%">
+  </a>
+  <div class="text-section">
+    <p>
+      Step 7
+    </p>
+  </div>
+<div class="code-section">
+    <textarea rows="4" class="textbox code">
+
+    </textarea>
+    <button class="copy-button" onclick="copyCode(7)">Copy Code</button>
+  </div>
+</div>
+
+    <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+  <div class="numbertext">8 / 28</div>
+  <!-- Wrap the image in an anchor tag with a target attribute -->
+  <a href="08.jpeg" target="_blank">
+    <img src="../windowsserver/2_add_services/08.jpeg" style="width:100%">
+  </a>
+  <div class="text-section">
+    <p>
+      Step 8
+    </p>
+  </div>
+<div class="code-section">
+    <textarea rows="4" class="textbox code">
+
+    </textarea>
+    <button class="copy-button" onclick="copyCode(8)">Copy Code</button>
+  </div>
+</div>
+
+    <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+  <div class="numbertext">9 / 28</div>
+  <!-- Wrap the image in an anchor tag with a target attribute -->
+  <a href="09.jpeg" target="_blank">
+    <img src="../windowsserver/2_add_services/09.jpeg" style="width:100%">
+  </a>
+  <div class="text-section">
+    <p>
+      Step 9
+    </p>
+  </div>
+<div class="code-section">
+    <textarea rows="4" class="textbox code">
+
+    </textarea>
+    <button class="copy-button" onclick="copyCode(9)">Copy Code</button>
+  </div>
+</div>
+
+    <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+  <div class="numbertext">10 / 28</div>
+  <!-- Wrap the image in an anchor tag with a target attribute -->
+  <a href="10.jpeg" target="_blank">
+    <img src="../windowsserver/2_add_services/10.jpeg" style="width:100%">
+  </a>
+  <div class="text-section">
+    <p>
+      Step 10
+    </p>
+  </div>
+<div class="code-section">
+    <textarea rows="4" class="textbox code">
+
+    </textarea>
+    <button class="copy-button" onclick="copyCode(10)">Copy Code</button>
+  </div>
+</div>
+
+    <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+  <div class="numbertext">11 / 28</div>
+  <!-- Wrap the image in an anchor tag with a target attribute -->
+  <a href="11.jpeg" target="_blank">
+    <img src="../windowsserver/2_add_services/11.jpeg" style="width:100%">
+  </a>
+  <div class="text-section">
+    <p>
+      Step 11
+    </p>
+  </div>
+<div class="code-section">
+    <textarea rows="4" class="textbox code">
+
+    </textarea>
+    <button class="copy-button" onclick="copyCode(11)">Copy Code</button>
+  </div>
+</div>
+
+    <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+  <div class="numbertext">12 / 28</div>
+  <!-- Wrap the image in an anchor tag with a target attribute -->
+  <a href="12.jpeg" target="_blank">
+    <img src="../windowsserver/2_add_services/12.jpeg" style="width:100%">
+  </a>
+  <div class="text-section">
+    <p>
+      Step 12
+    </p>
+  </div>
+<div class="code-section">
+    <textarea rows="4" class="textbox code">
+
+    </textarea>
+    <button class="copy-button" onclick="copyCode(12)">Copy Code</button>
+  </div>
+</div>
+
+    <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+  <div class="numbertext">13 / 28</div>
+  <!-- Wrap the image in an anchor tag with a target attribute -->
+  <a href="13.jpeg" target="_blank">
+    <img src="../windowsserver/2_add_services/13.jpeg" style="width:100%">
+  </a>
+  <div class="text-section">
+    <p>
+      Step 13
+    </p>
+  </div>
+<div class="code-section">
+    <textarea rows="4" class="textbox code">
+
+    </textarea>
+    <button class="copy-button" onclick="copyCode(13)">Copy Code</button>
+  </div>
+</div>
+
+    <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+  <div class="numbertext">14 / 28</div>
+  <!-- Wrap the image in an anchor tag with a target attribute -->
+  <a href="14.jpeg" target="_blank">
+    <img src="../windowsserver/2_add_services/14.jpeg" style="width:100%">
+  </a>
+  <div class="text-section">
+    <p>
+      Step 14
+    </p>
+  </div>
+<div class="code-section">
+    <textarea rows="4" class="textbox code">
+
+    </textarea>
+    <button class="copy-button" onclick="copyCode(14)">Copy Code</button>
+  </div>
+</div>
+
+    <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+  <div class="numbertext">15 / 28</div>
+  <!-- Wrap the image in an anchor tag with a target attribute -->
+  <a href="15.jpeg" target="_blank">
+    <img src="../windowsserver/2_add_services/15.jpeg" style="width:100%">
+  </a>
+  <div class="text-section">
+    <p>
+      Step 15
+    </p>
+  </div>
+<div class="code-section">
+    <textarea rows="4" class="textbox code">
+
+    </textarea>
+    <button class="copy-button" onclick="copyCode(15)">Copy Code</button>
+  </div>
+</div>
+
+    <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+  <div class="numbertext">16 / 28</div>
+  <!-- Wrap the image in an anchor tag with a target attribute -->
+  <a href="16.jpeg" target="_blank">
+    <img src="../windowsserver/2_add_services/16.jpeg" style="width:100%">
+  </a>
+  <div class="text-section">
+    <p>
+      Step 16
+    </p>
+  </div>
+<div class="code-section">
+    <textarea rows="4" class="textbox code">
+
+    </textarea>
+    <button class="copy-button" onclick="copyCode(16)">Copy Code</button>
+  </div>
+</div>
+
+    <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+  <div class="numbertext">17 / 28</div>
+  <!-- Wrap the image in an anchor tag with a target attribute -->
+  <a href="17.jpeg" target="_blank">
+    <img src="../windowsserver/2_add_services/17.jpeg" style="width:100%">
+  </a>
+  <div class="text-section">
+    <p>
+      Step 17
+    </p>
+  </div>
+<div class="code-section">
+    <textarea rows="4" class="textbox code">
+
+    </textarea>
+    <button class="copy-button" onclick="copyCode(17)">Copy Code</button>
+  </div>
+</div>
+
+    <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+  <div class="numbertext">18 / 28</div>
+  <!-- Wrap the image in an anchor tag with a target attribute -->
+  <a href="18.jpeg" target="_blank">
+    <img src="../windowsserver/2_add_services/18.jpeg" style="width:100%">
+  </a>
+  <div class="text-section">
+    <p>
+      Step 18
+    </p>
+  </div>
+<div class="code-section">
+    <textarea rows="4" class="textbox code">
+
+    </textarea>
+    <button class="copy-button" onclick="copyCode(18)">Copy Code</button>
+  </div>
+</div>
+
+    <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+  <div class="numbertext">19 / 28</div>
+  <!-- Wrap the image in an anchor tag with a target attribute -->
+  <a href="19.jpeg" target="_blank">
+    <img src="../windowsserver/2_add_services/19.jpeg" style="width:100%">
+  </a>
+  <div class="text-section">
+    <p>
+      Step 19
+    </p>
+  </div>
+<div class="code-section">
+    <textarea rows="4" class="textbox code">
+
+    </textarea>
+    <button class="copy-button" onclick="copyCode(19)">Copy Code</button>
+  </div>
+</div>
+
+    <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+  <div class="numbertext">20 / 28</div>
+  <!-- Wrap the image in an anchor tag with a target attribute -->
+  <a href="20.jpeg" target="_blank">
+    <img src="../windowsserver/2_add_services/20.jpeg" style="width:100%">
+  </a>
+  <div class="text-section">
+    <p>
+      Step 20
+    </p>
+  </div>
+<div class="code-section">
+    <textarea rows="4" class="textbox code">
+
+    </textarea>
+    <button class="copy-button" onclick="copyCode(20)">Copy Code</button>
+  </div>
+</div>
+
+    <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+  <div class="numbertext">21 / 28</div>
+  <!-- Wrap the image in an anchor tag with a target attribute -->
+  <a href="21.jpeg" target="_blank">
+    <img src="../windowsserver/2_add_services/21.jpeg" style="width:100%">
+  </a>
+  <div class="text-section">
+    <p>
+      Step 21
+    </p>
+  </div>
+<div class="code-section">
+    <textarea rows="4" class="textbox code">
+
+    </textarea>
+    <button class="copy-button" onclick="copyCode(21)">Copy Code</button>
+  </div>
+</div>
+
+    <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+  <div class="numbertext">22 / 28</div>
+  <!-- Wrap the image in an anchor tag with a target attribute -->
+  <a href="22.jpeg" target="_blank">
+    <img src="../windowsserver/2_add_services/22.jpeg" style="width:100%">
+  </a>
+  <div class="text-section">
+    <p>
+      Step 22
+    </p>
+  </div>
+<div class="code-section">
+    <textarea rows="4" class="textbox code">
+
+    </textarea>
+    <button class="copy-button" onclick="copyCode(22)">Copy Code</button>
+  </div>
+</div>
+
+    <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+  <div class="numbertext">23 / 28</div>
+  <!-- Wrap the image in an anchor tag with a target attribute -->
+  <a href="23.jpeg" target="_blank">
+    <img src="../windowsserver/2_add_services/23.jpeg" style="width:100%">
+  </a>
+  <div class="text-section">
+    <p>
+      Step 23
+    </p>
+  </div>
+<div class="code-section">
+    <textarea rows="4" class="textbox code">
+
+    </textarea>
+    <button class="copy-button" onclick="copyCode(23)">Copy Code</button>
+  </div>
+</div>
+
+    <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+  <div class="numbertext">24 / 28</div>
+  <!-- Wrap the image in an anchor tag with a target attribute -->
+  <a href="24.jpeg" target="_blank">
+    <img src="../windowsserver/2_add_services/24.jpeg" style="width:100%">
+  </a>
+  <div class="text-section">
+    <p>
+      Step 24
+    </p>
+  </div>
+<div class="code-section">
+    <textarea rows="4" class="textbox code">
+
+    </textarea>
+    <button class="copy-button" onclick="copyCode(24)">Copy Code</button>
+  </div>
+</div>
+
+    <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+  <div class="numbertext">25 / 28</div>
+  <!-- Wrap the image in an anchor tag with a target attribute -->
+  <a href="25.jpeg" target="_blank">
+    <img src="../windowsserver/2_add_services/25.jpeg" style="width:100%">
+  </a>
+  <div class="text-section">
+    <p>
+      Step 25
+    </p>
+  </div>
+<div class="code-section">
+    <textarea rows="4" class="textbox code">
+
+    </textarea>
+    <button class="copy-button" onclick="copyCode(25)">Copy Code</button>
+  </div>
+</div>
+
+    <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+  <div class="numbertext">26 / 28</div>
+  <!-- Wrap the image in an anchor tag with a target attribute -->
+  <a href="26.jpeg" target="_blank">
+    <img src="../windowsserver/2_add_services/26.jpeg" style="width:100%">
+  </a>
+  <div class="text-section">
+    <p>
+      Step 26
+    </p>
+  </div>
+<div class="code-section">
+    <textarea rows="4" class="textbox code">
+
+    </textarea>
+    <button class="copy-button" onclick="copyCode(26)">Copy Code</button>
+  </div>
+</div>
+
+    <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+  <div class="numbertext">27 / 28</div>
+  <!-- Wrap the image in an anchor tag with a target attribute -->
+  <a href="27.jpeg" target="_blank">
+    <img src="../windowsserver/2_add_services/27.jpeg" style="width:100%">
+  </a>
+  <div class="text-section">
+    <p>
+      Step 27
+    </p>
+  </div>
+<div class="code-section">
+    <textarea rows="4" class="textbox code">
+
+    </textarea>
+    <button class="copy-button" onclick="copyCode(27)">Copy Code</button>
+  </div>
+</div>
+
+    <!-- Full-width images with text box, code box, and copy code button -->
+<div class="mySlides fade">
+  <div class="numbertext">28 / 28</div>
+  <!-- Wrap the image in an anchor tag with a target attribute -->
+  <a href="28.jpeg" target="_blank">
+    <img src="../windowsserver/2_add_services/28.jpeg" style="width:100%">
+  </a>
+  <div class="text-section">
+    <p>
+      Step 28
+    </p>
+  </div>
+<div class="code-section">
+    <textarea rows="4" class="textbox code">
+
+    </textarea>
+    <button class="copy-button" onclick="copyCode(28)">Copy Code</button>
+  </div>
+</div>
+</div>
+    <!-- Other slides here -->
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <!-- Dots here -->
+  </div>
+</div>
+    
+      <script src="../script.js" async defer></script>
+    </body>
 </html>
