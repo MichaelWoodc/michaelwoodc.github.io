@@ -15,7 +15,7 @@
     margin: 0;
   }
 
-  /* Back arrow button container */
+  /* Back arrow button with background */
   .back-button {
     position: fixed;
     top: 1rem;
@@ -23,18 +23,21 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    background: none;
-    border: none;
+    background: rgba(30, 30, 30, 0.9);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 999px;
+    padding: 0.4rem 0.9rem;
     color: #ffffff;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     cursor: pointer;
     z-index: 10000;
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 6px rgba(0, 255, 255, 0.3);
   }
 
   .back-button svg {
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
     fill: none;
     stroke: currentColor;
     stroke-width: 2.5;
@@ -44,8 +47,10 @@
   }
 
   .back-button:hover {
+    background: rgba(0, 255, 255, 0.15);
     color: #00bcd4;
     transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
   }
 
   .back-button:hover svg {
@@ -54,7 +59,7 @@
 
   h1 {
     text-align: center;
-    margin-top: 3rem; /* leave space for arrow */
+    margin-top: 4rem; /* leave space for back button */
     margin-bottom: -1rem;
     color: #ffffff;
   }
@@ -116,11 +121,33 @@
     margin-bottom: 1rem;
   }
 
+  /* SVGs stay contained and optionally glow */
   .logo img {
+    width: auto;
+    height: 100%;
     max-width: 90%;
     max-height: 90%;
     border-radius: 1rem;
+    transition: filter 0.3s ease;
   }
+
+  /* Glow effect toggle via data attribute */
+  .logo img[data-glow="true"] {
+    filter: brightness(0) invert(1) drop-shadow(0 0 4px rgba(0, 255, 255, 0.4));
+  }
+
+  .card:hover .logo img[data-glow="true"] {
+    filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(0, 255, 255, 0.8));
+  }
+
+  /* New class for hover-only glow without color change */
+  .logo img[data-glow-hover="true"] {
+    /* no filter applied by default, keeps original colors */
+  }
+
+.card:hover .logo img[data-glow-hover="true"] {
+  filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.8));
+}
 
   .card-text {
     text-align: center;
@@ -170,9 +197,10 @@
 <p>Connect / Network with me or see my work below</p>
 
 <div class="grid">
+  <!-- LinkedIn with glow -->
   <a href="https://www.linkedin.com/in/michael-woodcock-2359b448/" class="card">
     <div class="logo">
-      <img src="icons/general/linkedin.svg" alt="LinkedIn Logo">
+      <img src="icons/general/linkedin.svg" alt="LinkedIn Logo" data-glow="true">
     </div>
     <div class="card-text">
       <h3>LinkedIn</h3>
@@ -180,9 +208,10 @@
     </div>
   </a>
 
+  <!-- GitHub with glow -->
   <a href="https://github.com/MichaelWoodc" class="card">
     <div class="logo">
-      <img src="icons/general/github_black.svg" alt="GitHub Logo">
+      <img src="icons/general/github_black.svg" alt="GitHub Logo" data-glow="true">
     </div>
     <div class="card-text">
       <h3>GitHub</h3>
@@ -190,9 +219,10 @@
     </div>
   </a>
 
+  <!-- ResearchGate with glow -->
   <a href="https://www.researchgate.net/profile/Michael-Woodcock-2" class="card">
     <div class="logo">
-      <img src="icons/researchgate-net/RG.svg" alt="ResearchGate Logo">
+      <img src="icons/researchgate-net/RG.svg" alt="ResearchGate Logo" data-glow="true">
     </div>
     <div class="card-text">
       <h3>ResearchGate</h3>
@@ -200,9 +230,10 @@
     </div>
   </a>
 
+  <!-- Google Scholar without glow -->
   <a href="https://scholar.google.com/citations?user=lNOVShYAAAAJ" class="card">
     <div class="logo">
-      <img src="icons/general/google-scholar.svg" alt="Google Scholar Logo">
+      <img src="icons/general/google-scholar.svg" alt="Google Scholar Logo" data-glow-hover="true">
     </div>
     <div class="card-text">
       <h3>Google Scholar</h3>
@@ -210,9 +241,10 @@
     </div>
   </a>
 
+  <!-- ORCID without glow -->
   <a href="https://orcid.org/0009-0008-1731-7852" class="card">
     <div class="logo">
-      <img src="icons/orcid-org/orcid.svg" alt="ORCID Logo">
+      <img src="icons/orcid-org/orcid.svg" alt="ORCID Logo" data-glow-hover="true">
     </div>
     <div class="card-text">
       <h3>ORCID</h3>
@@ -220,9 +252,10 @@
     </div>
   </a>
 
+  <!-- My IT Laboratory without glow -->
   <a href="https://michaelwoodcock.duckdns.org/" class="card">
     <div class="logo">
-      <img src="icons/research/research-svgrepo-com2.svg" alt="IT Lab Logo">
+      <img src="icons/research/research-svgrepo-com2.svg" alt="IT Lab Logo" data-glow-hover="true">
     </div>
     <div class="card-text">
       <h3>My IT Laboratory</h3>
@@ -230,19 +263,21 @@
     </div>
   </a>  
 
+  <!-- My Google Site without glow -->
   <a href="https://sites.google.com/georgiasouthern.edu/michael-woodcock" class="card">
     <div class="logo">
-      <img src="icons/general/briefcase.svg" alt="Google Site Logo">
+      <img src="icons/general/briefcase.svg" alt="Google Site Logo" data-glow="true">
     </div>
     <div class="card-text">
-      <h3>My Google Site</h3>
+      <h3>My Google Site / Portfolio</h3>
       <p>My site featuring completed projects and other work.</p>
     </div>
   </a>    
 
+  <!-- Email without glow -->
   <a href="https://michaelwoodcock.duckdns.org/contact_info/emails.html" class="card">
     <div class="logo">
-      <img src="icons/contact/email.svg" alt="Email Logo">
+      <img src="icons/contact/email.svg" alt="Email Logo" data-glow-hover="true">
     </div>
     <div class="card-text">
       <h3>Email</h3>
