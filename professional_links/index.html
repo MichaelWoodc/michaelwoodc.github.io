@@ -145,9 +145,9 @@
     /* no filter applied by default, keeps original colors */
   }
 
-.card:hover .logo img[data-glow-hover="true"] {
-  filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.8));
-}
+  .card:hover .logo img[data-glow-hover="true"] {
+    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.8));
+  }
 
   .card-text {
     text-align: center;
@@ -253,7 +253,7 @@
   </a>
 
   <!-- My IT Laboratory without glow -->
-  <a href="home_lab/index.html" class="card">
+  <a href="../home_lab/index.html" class="card">
     <div class="logo">
       <img src="icons/research/research-svgrepo-com2.svg" alt="IT Lab Logo" data-glow-hover="true">
     </div>
@@ -291,9 +291,14 @@ document.querySelectorAll('.card').forEach(card => {
   card.addEventListener('click', function(e) {
     e.preventDefault();
     const href = this.getAttribute('href');
+    const isInternal = href.startsWith('.') || href.startsWith('/') || !href.includes('http');
     this.classList.add('zoom-click');
     setTimeout(() => {
-      window.open(href, '_blank');
+      if (isInternal) {
+        window.location.href = href;
+      } else {
+        window.open(href, '_blank');
+      }
       this.classList.remove('zoom-click');
     }, 1000);
   });
