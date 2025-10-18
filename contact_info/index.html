@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Email Protection Examples</title>
+<title>My Contact Emails</title>
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -19,17 +19,13 @@
     color: #ffffff;
   }
 
-  .example {
+  .card {
     background: #1e1e1e;
     padding: 1.5rem;
     border-radius: 1rem;
     margin-bottom: 2rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-  }
-
-  .card {
     text-align: center;
-    margin-top: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
   }
 
   button {
@@ -39,6 +35,7 @@
     padding: 0.6rem 1.2rem;
     border-radius: 0.5rem;
     cursor: pointer;
+    margin-top: 0.5rem;
   }
 
   button:hover {
@@ -56,104 +53,119 @@
     color: #4db8ff;
   }
 
-  .logo {
-    width: 80px;
-    height: 80px;
-    background: #333;
-    border-radius: 1rem;
+  /* Back arrow button with background (copied exactly) */
+  .back-button {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin: 1rem auto;
+    gap: 0.5rem;
+    background: rgba(30, 30, 30, 0.9);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 999px;
+    padding: 0.4rem 0.9rem;
+    color: #ffffff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    z-index: 10000;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 6px rgba(0, 255, 255, 0.3);
   }
 
-  .logo img {
-    max-width: 70%;
-    max-height: 70%;
+  .back-button svg {
+    width: 26px;
+    height: 26px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: transform 0.3s ease;
   }
 
-  .divider {
-    border-top: 1px solid #333;
-    margin: 3rem 0;
+  .back-button:hover {
+    background: rgba(0, 255, 255, 0.15);
+    color: #00bcd4;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+  }
+
+  .back-button:hover svg {
+    transform: translateX(-3px);
   }
 </style>
 </head>
 <body>
 
-<h1>Email Protection Techniques</h1>
-<p style="text-align:center;">Compare three static approaches to protect your email address from bots.</p>
+<!-- Back Arrow Button -->
+<button class="back-button" onclick="history.back()">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M15 18l-6-6 6-6" />
+  </svg>
+  <span>Back</span>
+</button>
 
-<!-- ================== Example 1 ================== -->
-<div class="example" id="example1">
-  <h2>1️⃣ Click to Reveal (Base64 Encoded)</h2>
-  <p>This email is hidden using Base64 encoding and only revealed when you click the button.</p>
-  <div class="card">
-    <div class="logo">
-      <img src="email.svg" alt="Email Logo">
-    </div>
-    <p id="email1-text">[Click the button below to reveal email]</p>
-    <button id="reveal1">I'm not a bot — show email</button>
-  </div>
+<h1>Contact Me</h1>
+<p style="text-align:center;">Solve the math puzzle capcha to reveal my email address.</p>
+
+<!-- ================== EMAIL 1 ================== -->
+<div class="card" id="email-card-1">
+  <h2>Georgia Southern Email</h2>
+  <p id="email-text-1">What is 3 + 4?</p>
+  <input type="number" id="captcha-input-1" placeholder="Your answer">
+  <button id="check-answer-1">Submit</button>
 </div>
 
-<!-- ================== Example 2 ================== -->
-<div class="example" id="example2">
-  <h2>2️⃣ Math CAPTCHA</h2>
-  <p>You must answer a simple math question to reveal the email address.</p>
-  <div class="card">
-    <div class="logo">
-      <img src="email.svg" alt="Email Logo">
-    </div>
-    <p id="email2-text">Solve this to reveal my email:</p>
-    <p>What is 3 + 4?</p>
-    <input type="number" id="captcha-input" placeholder="Your answer">
-    <button id="check-answer">Submit</button>
-  </div>
+<!-- ================== EMAIL 2 ================== -->
+<div class="card" id="email-card-2">
+  <h2>Personal Email 1</h2>
+  <p id="email-text-2">What is 5 + 6?</p>
+  <input type="number" id="captcha-input-2" placeholder="Your answer">
+  <button id="check-answer-2">Submit</button>
 </div>
 
-<!-- ================== Example 3 ================== -->
-<div class="example" id="example3">
-  <h2>3️⃣ Google reCAPTCHA</h2>
-  <p>This one uses Google reCAPTCHA. You’ll need your own site key to make it work.</p>
-  <div class="card">
-    <div class="logo">
-      <img src="email.svg" alt="Email Logo">
-    </div>
-    <p id="email3-text">Verify below to see my email:</p>
-    <!-- Replace YOUR_SITE_KEY with your actual reCAPTCHA key -->
-    <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY" data-callback="showEmail3"></div>
-  </div>
-</div>
+<!-- ================== EMAIL 3 ================== -->
+<!-- <div class="card" id="email-card-3">
+  <h2>Email 3</h2>
+  <p id="email-text-3">What is 2 + 9?</p>
+  <input type="number" id="captcha-input-3" placeholder="Your answer">
+  <button id="check-answer-3">Submit</button>
+</div> -->
 
-<!-- Scripts -->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script>
-// Example 1 — Base64 click to reveal
-const encoded1 = "eW91cmVtYWlsQGV4YW1wbGUuY29t"; // your Base64 email
-document.getElementById('reveal1').addEventListener('click', () => {
-  const email = atob(encoded1);
-  document.getElementById('email1-text').innerHTML = `<a href="mailto:${email}">${email}</a>`;
-});
+// ================== EMAIL DATA ==================
+const emails = [
+  "bXcyNDM5NkBnZW9yZ2lhc291dGhlcm4uZWR1",
+  "bWx3MTltbHc5MUBnbWFpbC5jb20=",
+  "bWljaGFlbDE5d29vZGNvY2s5MUBnbWFpbC5jb20="
+];
 
-// Example 2 — Math CAPTCHA
-const encoded2 = "eW91cmVtYWlsQGV4YW1wbGUuY29t";
-document.getElementById('check-answer').addEventListener('click', () => {
-  const ans = document.getElementById('captcha-input').value;
+// ================== EMAIL 1 ==================
+document.getElementById('check-answer-1').addEventListener('click', () => {
+  const ans = document.getElementById('captcha-input-1').value;
   if (ans == "7") {
-    const email = atob(encoded2);
-    document.getElementById('email2-text').innerHTML = `<a href="mailto:${email}">${email}</a>`;
-    document.getElementById('captcha-input').remove();
-    document.getElementById('check-answer').remove();
+    const email = atob(emails[0]);
+    document.getElementById('email-text-1').innerHTML = `<a href="mailto:${email}">${email}</a>`;
+    document.getElementById('captcha-input-1').remove();
+    document.getElementById('check-answer-1').remove();
   } else {
     alert("Oops! Try again.");
   }
 });
 
-// Example 3 — Google reCAPTCHA
-function showEmail3() {
-  const email = atob("eW91cmVtYWlsQGV4YW1wbGUuY29t");
-  document.getElementById('email3-text').innerHTML = `<a href="mailto:${email}">${email}</a>`;
-}
+// ================== EMAIL 2 ==================
+document.getElementById('check-answer-2').addEventListener('click', () => {
+  const ans = document.getElementById('captcha-input-2').value;
+  if (ans == "11") {
+    const email = atob(emails[1]);
+    document.getElementById('email-text-2').innerHTML = `<a href="mailto:${email}">${email}</a>`;
+    document.getElementById('captcha-input-2').remove();
+    document.getElementById('check-answer-2').remove();
+  } else {
+    alert("Oops! Try again.");
+  }
+});
 </script>
 
 </body>
