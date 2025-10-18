@@ -3,18 +3,70 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Professional Links</title>
+<title>Michael Woodcock's Professional Links</title>
 <style>
   body {
     font-family: 'Arial', sans-serif;
     background: #121212;
     color: #e0e0e0;
-    padding: 2rem;
+    padding-left: 1rem;    
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    margin: 0;
+  }
+
+  /* Back arrow button container */
+  .back-button {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 10000;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .back-button svg {
+    width: 28px;
+    height: 28px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: transform 0.3s ease;
+  }
+
+  .back-button:hover {
+    color: #00bcd4;
+    transform: scale(1.05);
+  }
+
+  .back-button:hover svg {
+    transform: translateX(-3px);
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 3rem; /* leave space for arrow */
+    margin-bottom: -1rem;
+    color: #ffffff;
   }
 
   h2 {
     text-align: center;
     margin-bottom: 2rem;
+    color: #ffffff;
+  }
+
+  p {
+    text-align: center;
     color: #ffffff;
   }
 
@@ -48,7 +100,7 @@
   }
 
   .card.zoom-click {
-    transform: scale(5); /* dramatic zoom */
+    transform: scale(5);
     transition: transform 1s ease-in-out;
     z-index: 9999;
   }
@@ -90,16 +142,13 @@
     .card {
       padding: 0.8rem;
     }
-
     .logo {
       width: 100px;
       height: 100px;
     }
-
     .card-text h3 {
       font-size: 1.1rem;
     }
-
     .card-text p {
       font-size: 0.85rem;
     }
@@ -108,7 +157,17 @@
 </head>
 <body>
 
+<!-- Back Arrow Button -->
+<button class="back-button" onclick="history.back()">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M15 18l-6-6 6-6" />
+  </svg>
+  <span>Back</span>
+</button>
+
+<h1>Michael Woodcock</h1>
 <h2>My Professional Links</h2>
+<p>Connect / Network with me or see my work below</p>
 
 <div class="grid">
   <a href="https://www.linkedin.com/in/michael-woodcock-2359b448/" class="card">
@@ -143,7 +202,7 @@
 
   <a href="https://scholar.google.com/citations?user=lNOVShYAAAAJ" class="card">
     <div class="logo">
-      <img src="icons/general/google-scholar.svg" alt="ResearchGate Logo">
+      <img src="icons/general/google-scholar.svg" alt="Google Scholar Logo">
     </div>
     <div class="card-text">
       <h3>Google Scholar</h3>
@@ -153,7 +212,7 @@
 
   <a href="https://orcid.org/0009-0008-1731-7852" class="card">
     <div class="logo">
-      <img src="icons/orcid-org/orcid.svg" alt="ResearchGate Logo">
+      <img src="icons/orcid-org/orcid.svg" alt="ORCID Logo">
     </div>
     <div class="card-text">
       <h3>ORCID</h3>
@@ -163,7 +222,7 @@
 
   <a href="https://michaelwoodcock.duckdns.org/" class="card">
     <div class="logo">
-      <img src="icons/research/research-svgrepo-com2.svg" alt="ResearchGate Logo">
+      <img src="icons/research/research-svgrepo-com2.svg" alt="IT Lab Logo">
     </div>
     <div class="card-text">
       <h3>My IT Laboratory</h3>
@@ -171,10 +230,9 @@
     </div>
   </a>  
 
-
   <a href="https://sites.google.com/georgiasouthern.edu/michael-woodcock" class="card">
     <div class="logo">
-      <img src="icons/general/briefcase.svg" alt="ResearchGate Logo">
+      <img src="icons/general/briefcase.svg" alt="Google Site Logo">
     </div>
     <div class="card-text">
       <h3>My Google Site</h3>
@@ -184,7 +242,7 @@
 
   <a href="https://michaelwoodcock.duckdns.org/contact_info/emails.html" class="card">
     <div class="logo">
-      <img src="icons/contact/email.svg" alt="ResearchGate Logo">
+      <img src="icons/contact/email.svg" alt="Email Logo">
     </div>
     <div class="card-text">
       <h3>Email</h3>
@@ -196,15 +254,13 @@
 <script>
 document.querySelectorAll('.card').forEach(card => {
   card.addEventListener('click', function(e) {
-    e.preventDefault(); // prevent immediate navigation
-    const href = this.getAttribute('href'); // store the link
-    this.classList.add('zoom-click'); // start zoom animation
-
-    // Wait 1 second to let the animation play
+    e.preventDefault();
+    const href = this.getAttribute('href');
+    this.classList.add('zoom-click');
     setTimeout(() => {
-      window.open(href, '_blank'); // open the link in a new tab
-      this.classList.remove('zoom-click'); // reset the card
-    }, 1000); // matches desired animation duration
+      window.open(href, '_blank');
+      this.classList.remove('zoom-click');
+    }, 1000);
   });
 });
 </script>
