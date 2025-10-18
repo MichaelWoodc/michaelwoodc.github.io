@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Behavioral Experiments Showcase</title>
+  <style>
+    :root {
+      --primary: #2a2a2a;
+      --secondary: #1a1a1a;
+      --accent: #3a7bd5;
+      --accent-hover: #4d8fe6;
+      --accent-active: #2a65b5;
+      --text: #e0e0e0;
+      --text-secondary: #b0b0b0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--primary);
+      color: var(--text);
+      margin: 0;
+      padding: 2rem;
+      line-height: 1.6;
+      text-align: center;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .motivation {
+      background-color: var(--secondary);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      text-align: left;
+    }
+    .experiment {
+      background-color: var(--secondary);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem auto;
+      max-width: 800px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .experiment:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    }
+    .experiment img {
+      display: block;
+      margin: 0 auto 1rem auto;
+      height: 300px;
+      width: auto;
+      border-radius: 5px;
+    }
+    .experiment a {
+      display: inline-block;
+      background-color: var(--accent);
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.2s, transform 0.1s;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 0.5rem;
+    }
+    .experiment a:hover {
+      background-color: var(--accent-hover);
+    }
+    .experiment a:active {
+      background-color: var(--accent-active);
+      transform: scale(0.98);
+    }
+    .description {
+      margin-top: 1rem;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+    .view-all-btn {
+      display: inline-block;
+      background-color: var(--accent);
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 2rem auto;
+      transition: background-color 0.2s, transform 0.1s;
+      border: none;
+      cursor: pointer;
+    }
+    .view-all-btn:hover {
+      background-color: var(--accent-hover);
+    }
+    .view-all-btn:active {
+      background-color: var(--accent-active);
+      transform: scale(0.98);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Research Examples showcase</h1>
+    
+    <div class="motivation">
+      <strong>Motivation:</strong><br>
+      In many fields such as psychology, neuroscience, linguistics, education, and mental health, experiments have long relied on controlled, lab-based environments with dedicated hardware. Thanks to fast internet, modern web technologies, and ubiquitous smart devices, we can now run precise experiments online without sacrificing temporal accuracy. This "game changer" allows us to collect data from larger, more diverse populations, and in environments where participants are more comfortable. In this showcase, you'll see both my personal examples and a curated collection of PsychoJS/jsPsych experiments.<br><br>My hope is that by providing these examples, I can inspire others to explore the potential of web-based experiments and contribute to the growing body of research in these area. I believe that by using the power of the browser and ubiquitous technology, we can conduct research with real innovation, ultimately leading to a better understanding of human behavior and cognition. <br><br>As a researcher, I am passionate about using technology to enhance our understanding of the mind and behavior. I believe that by leveraging the power of the web, we can create more engaging and effective experiments that can reach a wider audience. I hope that these examples will serve as a starting point for others to explore the possibilities of web-based research and contribute to the advancement of human knowledge.<br><br>
+      <!-- I'm a lifelong learner dedicated to uncovering hidden insights and facts both in the lab and out in the world. If you have questions about browser implementable research, python implementable research, ideas, or just want to talk research, don't hesitate to reach out. -->
+
+      <!-- I'm a lifelong learner with a deep curiosity about the secrets of the universe and a strong dedication to discovering new and hidden facts and making discoveries in the wild and the lab.  Whether it's designing experiments, exploring new technologies, or uncovering unexpected patterns, I'm always eager to discover something new. If you're interested in web-based research, Python-powered experiments, or just want to bounce around ideas, feel free to reach out—I'd love to connect. -->
+
+      <!-- I'm a lifelong learner with a strong dedication to discovering new facts in the wild and the lab.   -->
+
+    </div>
+    
+    <!-- Personal Examples Section -->
+    <h2>Personal Examples</h2>
+    <div class="experiment">
+      <img src="showcase_images/behavioral_contrast.png" alt="Behavior Contrast">
+      <a href="behavior_contrast/main.html">Behavior Contrast</a>
+      <div class="description">
+        Custom example demonstrating contrasting behavioral responses and integrated eye tracking.  This browser version of the experiment is a work in progress and is not yet fully functional.  
+      </div>
+    </div>
+
+    <div class="experiment">
+      <img src="showcase_images/colliding_stimuli.gif" alt="Colliding Stimuli">
+      <a href="https://michaelwoodcock.duckdns.org/stim_test/index.html">Colliding Stimuli</a>
+      <div class="description">
+        A novel experiment designed to test various theories using colliding stimuli. The web version of this experiment is a work in progress and is not yet fully functional. The python version on the other hand is functioning much better!  
+        The python version has been extensively tested to deliver reinforcement within 1 rendered frame, or about 17 milliseconds on most PCs.  Although many people believe python may not be fast enough for experiments requiring highly accurate and precise timing, as we can see in the animation, we can actually
+        use python and deliver feedback faster than the visual feedback offered for touch by the operating system itself!  While python is not always the best choice for real-time experiments, it can be used effectively with the right libraries and optimizations.  <br><br>This project started out with me writing the code from scratch before finding out how difficult and involved this project could be.  When the thought emerged to check the web for existing examples, there were none.  Searching for examples of adaptable code turned out to be the best way forward.  First, I started by adapting billiards / pool table games to the task.  When the required packages were too slow to render the feedback within one frame, I found a website dedicated to python data science that showcased an example simulating ideal gas particle collisions.  This other example was much faster, and I adapted it to handle user input and display text and visual feedback based on behavioural principles and applied behavior analysis.  It was written in Pygame, which is a great library for creating games and simulations in Python, as it uses a very efficient sdl2 wrapper backend to directly access mission critical functions at the operating system level with high priority, allowing us to render feedback as fast as the OS, or atleast the monitor, itself.  On outdated hardware, the code can run at over 200FPS and still render feedback within one frame.  <br><br>
+        The python code has been streamlined as much as possible to minimize any performance penalty from interpreter or operating system or program process overhead.
+        <br><br>
+        The program has been designed to render feedback not only as fast as possible, but also exactly where the participant is looking.  Potentially this will be helpful in ensuring positive reinforcement is delivered (and critically, percieved and understood) as close to 0 seconds as possible.  Participants don't even have to move their eyes to see the effects of their interactions with the program.  Further research may incorporate eye tracking and a web based backend to allow for real time feedback and data collection.  <br><br>
+      </div>
+    </div>
+
+    <div class="experiment">
+      <img src="showcase_images/danva_2.gif" alt="DANVA 2">
+      <a href="https://michaelwoodcock.duckdns.org/danva_2/index.html">DANVA-2</a>
+      <div class="description">
+        An offshoot of my Python project created for research, contributing to emotion recognition studies. My contributions assisted in the publication of: <br><br>
+        <a href="https://www.researchgate.net/publication/386877029_EXPRESS_Facial_Occlusion_with_Medical_Masks_Impacts_on_Emotion_Recognition_Rates_for_Emotion_Types_and_Intensities">EXPRESS: Facial Occlusion with Medical Masks</a><br>
+        <a href="https://www.researchgate.net/publication/351913544_SEPA_2021_Masking_Makes_Faces_Difficult">SEPA 2021: Masking Makes Faces Difficult</a><br><br>
+        The python code, and packaged installer / executable, compatible with windnows 10 x64 and newer, is viewable at: <br><br>
+        <a href="https://github.com/gingergrin/DANVA2">github.com/gingergrin/DANVA2</a><br>
+        This browser version of the experiment is a work in progress and is not yet fully functional.
+      </div>
+    </div>
+
+    <div class="experiment">
+      <img src="showcase_images/rat_basketball.jpg" alt="Rat Basketball">
+      <a href="https://sites.google.com/georgiasouthern.edu/michael-woodcock/projects/rat-basketball">Rat Basketball</a>
+      <div class="description">
+        Although this project does not work in a browser and is not dedicated to humans, it is a fun example of how we can use the principles of Applied Behavior Analysis (ABA) to train rats to play basketball!  Disclaimer: No rats were harmed in the making of this project.  The rats are trained to play basketball using positive reinforcement (giving them food or treats) and operant conditioning techniques.  
+        I did not train the rats myself, but merely focused on the programming and hardware aspects of the project.  The rats were trained by graduate students at Georgia Southern University, and I was not involved in the training process.  The project is designed to be a fun and engaging way to teach students about ABA principles and how they can be applied in real-world settings.
+        <br><br>
+        The project conributed to the publication of:
+
+        <a href="https://www.researchgate.net/publication/379370923_Ratsketball_Using_Low-cost_3D-Printed_Operant_Chambers_to_Probe_for_Generative_Learning">Ratsketball: Using Low-cost 3D-Printed Operant Chambers to Probe for Generative Learning</a><br><br>
+        The python code is viewable at: <br><br>
+        <a href="https://github.com/ratbasketball/rat_basketball">github.com/ratbasketball/rat_basketball</a><br>
+        more info is available at: <br>
+        <a href="https://sites.google.com/georgiasouthern.edu/michael-woodcock/projects/rat-basketball">My Projects Page (external)</a><br>
+
+      </div>
+    </div>
+
+    <!-- <div class="experiment"> -->
+      <!-- <img src="showcase_images/your_image.jpg" alt="Project Title"> -->
+      <!-- <a href="https://michaelwoodcock.duckdns.org/report.html">Python Programming Education</a> -->
+      <!-- <div class="description"> -->
+        <!-- Add your project description here -->
+<!-- Work in progress.  This project is dedicated to teaching python programming to students.  The project is designed to be a fun and engaging way to teach students about programming concepts and how they can be applied in real-world settings.  By applying verbal behavioral analysis, textual feedback, and linguistic learning principles, we aim to immprove student learning outcomes in programming education.<br><br> -->
+        <!-- <br><br> -->
+        <!-- Optional publication or related materials -->
+        <!-- <a href="https://your-publication-link.com">Publication Title</a><br><br> -->
+
+        <!-- Optional code repository -->
+        <!-- The python code is viewable at: <br><br> -->
+        <!-- <a href="https://github.com/your-repo">github.com/your-repo</a><br> -->
+
+        <!-- Optional extra info -->
+        <!-- More info is available at: <br> -->
+        <!-- <a href="https://your-additional-info-link.com">Your Projects Page (external)</a><br> -->
+      <!-- </div> -->
+    </div>
+    <div class="experiment">
+    
+      <img src="../research_showcase/showcase_images/normal_grades.gif" alt="Python Programming Education"> 
+
+      <!-- <img src="showcase_images/python_education.jpg" alt="Python Programming Education"> -->
+      <a href="https://michaelwoodcock.duckdns.org/report.html">Python Programming Education</a>
+      <div class="description">
+        This ongoing project is dedicated to making Python programming more accessible and engaging for students. It leverages principles from verbal behavior analysis(ABA), textual feedback, and linguistic learning theory to create a dynamic and supportive learning environment. Our goal is to improve student understanding and retention of core programming concepts through interactive lessons and real-world applications.<br><br>
+    Pictures depict the different feedback rates between live interpreters and the traditinal click to run interpreters.  As pictured: One delivers feedback with every keystoke, while the other requires deliberate user action to access feedback. <br><br>
+      </div>
+      <img src="../research_showcase/showcase_images/arepl_grades.gif" alt="Python Programming Education"> 
+
+    </div>
+
+    </div>
+    <!-- PsychoJS / jsPsych Examples Section -->
+    <h2>PsychoJS / jsPsych Examples</h2>
+    
+    
+
+    <div class="experiment">
+      <!-- <img src="showcase_images/jspsych-cloze.jpg" alt="Cloze Task"> -->
+      <a href="https://michaelwoodcock.duckdns.org/psychojs_test/js_psyc/examples/webgazer.html">Eye Tracking</a>
+      <div class="description">
+        Test webcam based eye tracking in your browser! This example uses the webcam to track eye movements and provide real-time data. It is a work in progress and not yet fully functional.
+      </div>
+    </div>
+    <div class="experiment">
+        <!-- <img src="showcase_images/jspsych-cloze.jpg" alt="Cloze Task"> -->
+        <a href="https://michaelwoodcock.duckdns.org/psychojs_test/js_psyc/examples/jspsych-cloze.html">Cloze Task</a>
+        <div class="description">
+          Participants fill in missing words to measure semantic processing and comprehension.
+        </div>
+    </div>
+    <div class="experiment">
+        <!-- <img src="showcase_images/jspsych-serial-reaction-time.jpg" alt="Serial Reaction Time"> -->
+        <a href="https://michaelwoodcock.duckdns.org/psychojs_test/js_psyc/examples/jspsych-serial-reaction-time.html">Serial Reaction Time</a>
+        <div class="description">
+          Measures sequential reaction times to assess motor and cognitive processing speed.
+        </div>
+      </div>
+    <div class="experiment">
+      <!-- <img src="showcase_images/timeline-variables.jpg" alt="Timeline Variables"> -->
+      <a href="https://michaelwoodcock.duckdns.org/psychojs_test/js_psyc/examples/timeline-variables.html">Timeline Variables</a>
+      <div class="description">
+        Demonstrates dynamic variable integration within experiment timelines.
+      </div>
+    </div>
+    <div class="experiment">
+      <!-- <img src="showcase_images/jspsych-survey-multi-choice.jpg" alt="Multi-choice Survey"> -->
+      <a href="https://michaelwoodcock.duckdns.org/psychojs_test/js_psyc/examples/jspsych-survey-multi-choice.html">Multi-choice Survey</a>
+      <div class="description">
+        An interactive survey module using multiple-choice questions to capture participant responses.
+      </div>
+    </div>
+    <div class="experiment">
+      <!-- <img src="showcase_images/jspsych-survey-multi-select.jpg" alt="Multi-select Survey"> -->
+      <a href="https://michaelwoodcock.duckdns.org/psychojs_test/js_psyc/examples/jspsych-survey-multi-select.html">Multi-select Survey</a>
+      <div class="description">
+        Lets participants select multiple answers for more nuanced data collection.
+      </div>
+    </div>
+    <div class="experiment">
+      <!-- <img src="showcase_images/jspsych-video-keyboard-response.jpg" alt="Video Keyboard Response"> -->
+      <a href="https://michaelwoodcock.duckdns.org/psychojs_test/js_psyc/examples/jspsych-video-keyboard-response.html">Video Keyboard Response</a>
+      <div class="description">
+        Combines video stimuli with keyboard input to gauge reaction times.
+      </div>
+    </div>
+    <div class="experiment">
+      <!-- <img src="showcase_images/test_demographics.jpg" alt="Test Demographics"> -->
+      <a href="https://michaelwoodcock.duckdns.org/psychojs_test/js_psyc/examples/test_demographics.html">Test Demographics</a>
+      <div class="description">
+        An example setup for collecting basic demographic data from participants.
+      </div>
+    </div>
+    <div class="experiment">
+      <!-- <img src="showcase_images/jspsych-image-keyboard-response.jpg" alt="Image Keyboard Response"> -->
+      <a href="https://michaelwoodcock.duckdns.org/psychojs_test/js_psyc/examples/jspsych-image-keyboard-response.html">Image Keyboard Response</a>
+      <div class="description">
+        Presents images with keyboard responses, ideal for rapid recognition tasks.
+      </div>
+    </div>
+    <div class="experiment">
+        <!-- <img src="showcase_images/progress-bar.jpg" alt="Progress Bar"> -->
+        <a href="https://michaelwoodcock.duckdns.org/psychojs_test/js_psyc/examples/progress-bar.html">Progress Bar</a>
+        <div class="description">
+          A visual progress indicator to offer real-time feedback on participant progress.
+        </div>
+    </div>
+    <div class="experiment">
+        <!-- <img src="showcase_images/jspsych-mirror-camera.jpg" alt="Mirror Camera"> -->
+        <a href="https://michaelwoodcock.duckdns.org/psychojs_test/js_psyc/examples/jspsych-mirror-camera.html">Mirror Camera</a>
+        <div class="description">
+          Uses webcam input to provide a mirrored video response setup in experiments.
+        </div>
+      </div>    
+
+      <div class="experiment">
+        <!-- <img src="showcase_images/simulation-data-only-mode.jpg" alt="Simulation Data Only Mode"> -->
+        <a href="https://michaelwoodcock.duckdns.org/psychojs_test/js_psyc/examples/simulation-data-only-mode.html">Simulation Data Only Mode</a>
+        <div class="description">
+          Focuses on data-driven simulations with minimal visual feedback.
+        </div>
+      </div>
+
+
+    <!-- View All Examples Button -->
+    <div style="margin-top: 2rem;">
+      <a class="view-all-btn" href="all_examples.html">View All Examples</a>
+    </div>
+    
+  </div>
+</body>
+</html>
