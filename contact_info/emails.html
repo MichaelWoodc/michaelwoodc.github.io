@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Contact Emails</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: #e0e0e0;
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  h1, h2 {
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .card {
+    background: #1e1e1e;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  }
+
+  button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+  }
+
+  button:hover {
+    background: #555;
+  }
+
+  input {
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    border: none;
+    margin-right: 0.5rem;
+  }
+
+  a {
+    color: #4db8ff;
+  }
+</style>
+</head>
+<body>
+
+<h1>Contact Me</h1>
+<p style="text-align:center;">Solve the math puzzle to reveal my email address.</p>
+
+<!-- ================== EMAIL 1 ================== -->
+<div class="card" id="email-card-1">
+  <h2>Georgia Southern Email</h2>
+  <p id="email-text-1">What is 3 + 4?</p>
+  <input type="number" id="captcha-input-1" placeholder="Your answer">
+  <button id="check-answer-1">Submit</button>
+</div>
+
+<!-- ================== EMAIL 2 ================== -->
+<div class="card" id="email-card-2">
+  <h2>Personal Email 1</h2>
+  <p id="email-text-2">What is 5 + 6?</p>
+  <input type="number" id="captcha-input-2" placeholder="Your answer">
+  <button id="check-answer-2">Submit</button>
+</div>
+
+<!-- ================== EMAIL 3 ================== -->
+<!-- <div class="card" id="email-card-3">
+  <h2>Email 3</h2>
+  <p id="email-text-3">What is 2 + 9?</p>
+  <input type="number" id="captcha-input-3" placeholder="Your answer">
+  <button id="check-answer-3">Submit</button>
+</div> -->
+
+<script>
+// ================== EMAIL DATA ==================
+// Base64 encoded emails
+const emails = [
+  "bXcyNDM5NkBnZW9yZ2lhc291dGhlcm4uZWR1", // mw24396
+  "bWx3MTltbHc5MUBnbWFpbC5jb20=", // mlw19mlw91(commented out for now)
+  "bWljaGFlbDE5d29vZGNvY2s5MUBnbWFpbC5jb20=", // michael19woodcock91 (commented out for now)
+];
+
+// ================== EMAIL 1 ==================
+document.getElementById('check-answer-1').addEventListener('click', () => {
+  const ans = document.getElementById('captcha-input-1').value;
+  if (ans == "7") { // correct answer
+    const email = atob(emails[0]);
+    document.getElementById('email-text-1').innerHTML = `<a href="mailto:${email}">${email}</a>`;
+    document.getElementById('captcha-input-1').remove();
+    document.getElementById('check-answer-1').remove();
+  } else {
+    alert("Oops! Try again.");
+  }
+});
+
+// ================== EMAIL 2 ==================
+// For now this one is commented out, uncomment your personal email to activate
+document.getElementById('check-answer-2').addEventListener('click', () => {
+  const ans = document.getElementById('captcha-input-2').value;
+  if (ans == "11") { // correct answer
+    const email = atob(emails[1]); // uncomment the second email in the array to use
+    document.getElementById('email-text-2').innerHTML = `<a href="mailto:${email}">${email}</a>`;
+    document.getElementById('captcha-input-2').remove();
+    document.getElementById('check-answer-2').remove();
+  } else {
+    alert("Oops! Try again.");
+  }
+});
+
+// ================== EMAIL 3 ==================
+document.getElementById('check-answer-3').addEventListener('click', () => {
+  const ans = document.getElementById('captcha-input-3').value;
+  if (ans == "11") { // correct answer
+    // const email = atob(emails[2]); // uncomment the third email in the array to use
+    // temporary placeholder until you uncomment
+    const email = "personal_email@example.com";
+    document.getElementById('email-text-3').innerHTML = `<a href="mailto:${email}">${email}</a>`;
+    document.getElementById('captcha-input-3').remove();
+    document.getElementById('check-answer-3').remove();
+  } else {
+    alert("Oops! Try again.");
+  }
+});
+
+/* 
+  ===== HOW TO ADD ANOTHER EMAIL =====
+  1. Add a new Base64-encoded email string to the `emails` array.
+     e.g., emails.push("encodedEmailHere");
+  2. Copy one of the existing card divs, update IDs (email-card-4, email-text-4, captcha-input-4, check-answer-4)
+  3. Add a new click listener like above, updating the correct answer and array index.
+  4. Update the math question inside the card.
+*/
+</script>
+
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professional Links</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background: #121212;
+    color: #e0e0e0;
+    padding: 2rem;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #ffffff;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .card {
+    background: #1e1e1e;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    transform-origin: center center;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.8);
+  }
+
+  .card.zoom-click {
+    transform: scale(5); /* dramatic zoom */
+    transition: transform 1s ease-in-out;
+    z-index: 9999;
+  }
+
+  .logo {
+    width: 120px;
+    height: 120px;
+    background: #333;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .logo img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 1rem;
+  }
+
+  .card-text {
+    text-align: center;
+  }
+
+  .card-text h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #ffffff;
+  }
+
+  .card-text p {
+    margin: 0.5rem 0 0 0;
+    font-size: 0.95rem;
+    color: #aaaaaa;
+  }
+
+  @media (max-width: 500px) {
+    .card {
+      padding: 0.8rem;
+    }
+
+    .logo {
+      width: 100px;
+      height: 100px;
+    }
+
+    .card-text h3 {
+      font-size: 1.1rem;
+    }
+
+    .card-text p {
+      font-size: 0.85rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<h2>My Professional Links</h2>
+<div class="grid">
+  <a href="https://www.linkedin.com/in/michael-woodcock-2359b448/" class="card">
+    <div class="logo">
+      <img src="icons/linkedin.svg" alt="LinkedIn Logo">
+    </div>
+    <div class="card-text">
+      <h3>LinkedIn</h3>
+      <p>Connect with me professionally and explore my career highlights.</p>
+    </div>
+  </a>
+
+  <a href="https://github.com/MichaelWoodc" class="card">
+    <div class="logo">
+      <img src="icons/github_black.svg" alt="GitHub Logo">
+    </div>
+    <div class="card-text">
+      <h3>GitHub</h3>
+      <p>Check out my projects, contributions, and coding portfolio.</p>
+    </div>
+  </a>
+
+  <a href="https://www.researchgate.net/profile/Michael-Woodcock-2" class="card">
+    <div class="logo">
+      <img src="icons/researchgate-net/RG.svg" alt="ResearchGate Logo">
+    </div>
+    <div class="card-text">
+      <h3>ResearchGate</h3>
+      <p>View my publications and connect with me in the research community.</p>
+    </div>
+  </a>
+
+  <a href="https://scholar.google.com/citations?user=lNOVShYAAAAJ" class="card">
+    <div class="logo">
+      <img src="icons/google-scholar.svg" alt="ResearchGate Logo">
+    </div>
+    <div class="card-text">
+      <h3>Google Scholar</h3>
+      <p>Browse my academic papers and research citations.</p>
+    </div>
+  </a>
+
+  <a href="https://orcid.org/0009-0008-1731-7852" class="card">
+    <div class="logo">
+      <img src="icons/orcid-org/orcid.svg" alt="ResearchGate Logo">
+    </div>
+    <div class="card-text">
+      <h3>ORCID</h3>
+      <p>My researcher ID and profile with verified publications.</p>
+    </div>
+  </a>
+
+  <a href="https://michaelwoodcock.duckdns.org/contact_info/emails.html" class="card">
+    <div class="logo">
+      <img src="icons/email.svg" alt="ResearchGate Logo">
+    </div>
+    <div class="card-text">
+      <h3>Email</h3>
+      <p>Reach out to me directly for collaboration or inquiries.</p>
+    </div>
+  </a>
+</div>
+
+<script>
+document.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('click', function(e) {
+    e.preventDefault(); // prevent immediate navigation
+    const href = this.getAttribute('href'); // store the link
+    this.classList.add('zoom-click'); // start zoom animation
+
+    // Wait 1 second to let the animation play
+    setTimeout(() => {
+      window.open(href, '_blank'); // open the link in a new tab
+      this.classList.remove('zoom-click'); // reset the card
+    }, 1000); // matches desired animation duration
+  });
+});
+</script>
+
+</body>
+</html>
