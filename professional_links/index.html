@@ -59,7 +59,7 @@
 
   h1 {
     text-align: center;
-    margin-top: 4rem; /* leave space for back button */
+    margin-top: 4rem;
     margin-bottom: -1rem;
     color: #ffffff;
   }
@@ -121,7 +121,6 @@
     margin-bottom: 1rem;
   }
 
-  /* SVGs stay contained and optionally glow */
   .logo img {
     width: auto;
     height: 100%;
@@ -131,22 +130,22 @@
     transition: filter 0.3s ease;
   }
 
-  /* Glow effect toggle via data attribute */
-  .logo img[data-glow="true"] {
-    filter: brightness(0) invert(1) drop-shadow(0 0 4px rgba(0, 255, 255, 0.4));
-  }
-
-  .card:hover .logo img[data-glow="true"] {
-    filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(0, 255, 255, 0.8));
-  }
-
-  /* New class for hover-only glow without color change */
-  .logo img[data-glow-hover="true"] {
-    /* no filter applied by default, keeps original colors */
-  }
-
+  /* Optional hover glow — comment this section out to disable it */
+  .logo img[data-glow-hover="true"] {}
   .card:hover .logo img[data-glow-hover="true"] {
     filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.8));
+  }
+
+  /* Always-on glow for dark mode visibility */
+  .banner[data-glow="true"] {
+    filter: brightness(0) invert(1) drop-shadow(0 0 6px rgba(0, 255, 255, 0.5));
+  }
+
+  .banner {
+    width: 100%;
+    max-width: 220px;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
   }
 
   .card-text {
@@ -173,6 +172,9 @@
       width: 100px;
       height: 100px;
     }
+    .banner {
+      max-width: 180px;
+    }
     .card-text h3 {
       font-size: 1.1rem;
     }
@@ -197,32 +199,32 @@
 <p>Connect / Network with me or see my work below</p>
 
 <div class="grid">
-  <!-- LinkedIn with glow -->
+  <!-- LinkedIn (has banner) -->
   <a href="https://www.linkedin.com/in/michael-woodcock-2359b448/" class="card">
     <div class="logo">
-      <img src="icons/general/linkedin.svg" alt="LinkedIn Logo" data-glow="true">
+      <img src="icons/general/linkedin-icon.svg" alt="LinkedIn Logo" data-glow-hover="true">
     </div>
+    <img src="icons/general/linkedin.svg" alt="LinkedIn Banner" class="banner">
     <div class="card-text">
-      <h3>LinkedIn</h3>
       <p>Connect with me professionally and explore my career highlights.</p>
     </div>
   </a>
 
-  <!-- ResearchGate with glow -->
+  <!-- ResearchGate (has banner + forced glow for visibility) -->
   <a href="https://www.researchgate.net/profile/Michael-Woodcock-2" class="card">
     <div class="logo">
-      <img src="icons/researchgate-net/RG.svg" alt="ResearchGate Logo" data-glow="true">
+      <img src="icons/researchgate-net/RG.svg" alt="ResearchGate Logo" data-glow-hover="true">
     </div>
+    <img src="icons/researchgate-net/researchgate-banner.svg" alt="ResearchGate Banner" class="banner" data-glow="true">
     <div class="card-text">
-      <h3>ResearchGate</h3>
       <p>View my publications and connect with me in the research community.</p>
     </div>
   </a>
 
-  <!-- GitHub with glow -->
+  <!-- GitHub -->
   <a href="https://github.com/MichaelWoodc" class="card">
     <div class="logo">
-      <img src="icons/general/github_black.svg" alt="GitHub Logo" data-glow="true">
+      <img src="icons/general/github_black.svg" alt="GitHub Logo" data-glow-hover="true">
     </div>
     <div class="card-text">
       <h3>GitHub</h3>
@@ -230,7 +232,7 @@
     </div>
   </a>
 
-  <!-- My IT Laboratory without glow -->
+  <!-- My IT Laboratory -->
   <a href="../home_lab/index.html" class="card">
     <div class="logo">
       <img src="icons/research/research-svgrepo-com2.svg" alt="IT Lab Logo" data-glow-hover="true">
@@ -241,10 +243,10 @@
     </div>
   </a>    
 
-  <!-- My Google Site without glow -->
+  <!-- Google Site -->
   <a href="https://sites.google.com/georgiasouthern.edu/michael-woodcock" class="card">
     <div class="logo">
-      <img src="icons/general/briefcase.svg" alt="Google Site Logo" data-glow="true">
+      <img src="icons/general/briefcase.svg" alt="Google Site Logo" data-glow-hover="true">
     </div>
     <div class="card-text">
       <h3>My Google Site / Portfolio</h3>
@@ -252,7 +254,7 @@
     </div>
   </a>    
 
-  <!-- Google Scholar without glow -->
+  <!-- Google Scholar -->
   <a href="https://scholar.google.com/citations?user=lNOVShYAAAAJ" class="card">
     <div class="logo">
       <img src="icons/general/google-scholar.svg" alt="Google Scholar Logo" data-glow-hover="true">
@@ -263,7 +265,7 @@
     </div>
   </a>
 
-  <!-- ORCID without glow -->
+  <!-- ORCID -->
   <a href="https://orcid.org/0009-0008-1731-7852" class="card">
     <div class="logo">
       <img src="icons/orcid-org/orcid.svg" alt="ORCID Logo" data-glow-hover="true">
@@ -274,7 +276,17 @@
     </div>
   </a>
 
-  <!-- Email without glow -->
+  <a href="https://orcid.org/0009-0008-1731-7852" class="card">
+    <div class="logo">
+      <img src="icons/orcid-org/orcid-logo.svg" alt="ORCID Icon" data-glow-hover="true">
+    </div>
+    <img src="icons/orcid-org/orcid.svg" alt="ORCID Banner" class="banner">
+    <div class="card-text">
+      <p>My researcher ID and profile with verified publications.</p>
+    </div>
+  </a>
+
+  <!-- Email -->
   <a href="../contact_info/index.html" class="card">
     <div class="logo">
       <img src="icons/contact/email.svg" alt="Email Logo" data-glow-hover="true">
