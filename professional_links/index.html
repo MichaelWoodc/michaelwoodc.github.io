@@ -130,13 +130,15 @@
     transition: filter 0.3s ease;
   }
 
-  /* Optional hover glow — comment this section out to disable it */
+  /* === Optional Glow Toggle === */
+  /* To disable glow on hover, comment out this entire section ↓ */
   .logo img[data-glow-hover="true"] {}
   .card:hover .logo img[data-glow-hover="true"] {
     filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.8));
   }
+  /* ↑ Comment out to disable hover glow */
 
-  /* Always-on glow for dark mode visibility */
+  /* Always-on glow for dark mode visibility (ResearchGate) */
   .banner[data-glow="true"] {
     filter: brightness(0) invert(1) drop-shadow(0 0 6px rgba(0, 255, 255, 0.5));
   }
@@ -144,8 +146,10 @@
   .banner {
     width: 100%;
     max-width: 220px;
+    max-height: 25px; /* added per your request */
     border-radius: 0.5rem;
     margin-bottom: 0.5rem;
+    object-fit: contain;
   }
 
   .card-text {
@@ -174,6 +178,7 @@
     }
     .banner {
       max-width: 180px;
+      max-height: 20px;
     }
     .card-text h3 {
       font-size: 1.1rem;
@@ -199,7 +204,7 @@
 <p>Connect / Network with me or see my work below</p>
 
 <div class="grid">
-  <!-- LinkedIn (has banner) -->
+  <!-- LinkedIn -->
   <a href="https://www.linkedin.com/in/michael-woodcock-2359b448/" class="card">
     <div class="logo">
       <img src="icons/general/linkedin-icon.svg" alt="LinkedIn Logo" data-glow-hover="true">
@@ -210,7 +215,7 @@
     </div>
   </a>
 
-  <!-- ResearchGate (has banner + forced glow for visibility) -->
+  <!-- ResearchGate -->
   <a href="https://www.researchgate.net/profile/Michael-Woodcock-2" class="card">
     <div class="logo">
       <img src="icons/researchgate-net/RG.svg" alt="ResearchGate Logo" data-glow-hover="true">
@@ -265,17 +270,7 @@
     </div>
   </a>
 
-  <!-- ORCID -->
-  <a href="https://orcid.org/0009-0008-1731-7852" class="card">
-    <div class="logo">
-      <img src="icons/orcid-org/orcid.svg" alt="ORCID Logo" data-glow-hover="true">
-    </div>
-    <div class="card-text">
-      <h3>ORCID</h3>
-      <p>My researcher ID and profile with verified publications.</p>
-    </div>
-  </a>
-
+  <!-- ORCID (icon + banner) -->
   <a href="https://orcid.org/0009-0008-1731-7852" class="card">
     <div class="logo">
       <img src="icons/orcid-org/orcid-logo.svg" alt="ORCID Icon" data-glow-hover="true">
