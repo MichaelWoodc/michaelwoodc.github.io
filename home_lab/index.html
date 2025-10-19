@@ -9,11 +9,13 @@
     font-family: 'Arial', sans-serif;
     background: #121212;
     color: #e0e0e0;
-    padding: 1rem;
+    padding-left: 1rem;    
+    padding-right: 1rem;
+    padding-bottom: 1rem;
     margin: 0;
   }
 
-  /* Back arrow button */
+  /* Back arrow button with background */
   .back-button {
     position: fixed;
     top: 1rem;
@@ -120,7 +122,7 @@
     max-width: 90%;
     max-height: 90%;
     border-radius: 1rem;
-    transition: filter 0.3s ease;
+    transition: filter 0.3s ease, transform 0.6s ease;
   }
 
   /* Glow effect toggle via data attribute */
@@ -132,27 +134,10 @@
     filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(0, 255, 255, 0.8));
   }
 
-  /* Navidrome continuous spin + glow */
-  @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-
-  @keyframes glow {
-    0%, 100% { filter: drop-shadow(0 0 6px rgba(0, 255, 255, 0.6)); }
-    50% { filter: drop-shadow(0 0 12px rgba(0, 255, 255, 1)); }
-  }
-
-  .navidrome-card .logo img {
-    transition: filter 0.3s ease;
-  }
-
-  .navidrome-card:hover .logo img {
-    animation: spin 2s linear infinite, glow 1.5s ease-in-out infinite;
-  }
-
   .card-text {
     text-align: center;
+    position: relative;
+    z-index: 1; /* keep text above GIF overlay */
   }
 
   .card-text h3 {
@@ -165,6 +150,54 @@
     margin: 0.5rem 0 0 0;
     font-size: 0.95rem;
     color: #aaaaaa;
+  }
+
+  /* Navidrome icon spins and glows only on hover */
+  .navidrome-card .logo img {
+    /* static by default */
+  }
+
+  .navidrome-card:hover .logo img {
+    animation: spin 2s linear infinite, glow 1.5s ease-in-out infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @keyframes glow {
+    0%, 100% { filter: drop-shadow(0 0 6px rgba(0, 255, 255, 0.6)); }
+    50% { filter: drop-shadow(0 0 12px rgba(0, 255, 255, 1)); }
+  }
+
+  /* Navidrome GIF overlay under text */
+  .navidrome-card {
+    position: relative;
+  }
+
+  .navidrome-card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url('icons/sound-wave.gif') center center / cover no-repeat;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    z-index: 0; /* behind content */
+  }
+
+  .navidrome-card:hover::after {
+    opacity: 0.05; /* semi-transparent */
+  }
+
+  /* Make Plex and Proxmox glow on hover */
+  .card:hover .logo img[data-glow-hover="true"] {
+    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.8));
+    transition: filter 0.3s ease;
   }
 
   @media (max-width: 500px) {
@@ -196,85 +229,86 @@
 
 <h1>My Home Lab</h1>
 <p>
-    <small>Feel free to click the first card to view my examples of research conductable through a browser! All services are hosted on my home lab server(s). Some services are private and require access permissions. Please contact me for guest access to those services.</small>
+  <small>Feel free to click the first card to view my examples of research conductable through a browser! All services are hosted on my home lab server(s). Some services are private and require access permissions. Please contact me for guest access to those services.</small>
 </p>
 
 <div class="grid">
-    <!-- Research Showcase -->
-    <a href="../research_showcase/index.html" class="card">
-        <div class="logo">
-            <img src="icons/flask.svg" alt="Research Showcase" data-glow="true">
-        </div>
-        <div class="card-text">
-            <h3>Research Showcase</h3>
-            <p>Portfolio of browser-based research tools and experiments, including behavioral and cognitive tasks.</p>
-        </div>
-    </a>
+  <!-- Research Showcase -->
+  <a href="../research_showcase/index.html" class="card">
+    <div class="logo">
+      <img src="icons/flask.svg" alt="Research Showcase" data-glow="true">
+    </div>
+    <div class="card-text">
+      <h3>Research Showcase</h3>
+      <p>Portfolio of browser-based research tools and experiments, including behavioral and cognitive tasks.</p>
+    </div>
+  </a>
 
-    <!-- My Google Site -->
-    <a href="https://sites.google.com/georgiasouthern.edu/michael-woodcock" class="card">
-        <div class="logo">
-            <img src="icons/briefcase.svg" alt="Google Site" data-glow="true">
-        </div>
-        <div class="card-text">
-            <h3>My Google Site</h3>
-            <p>My personal portfolio site. Some more detailed information is available on this site in the research showcase.</p>
-        </div>
-    </a>
+  <!-- My Google Site -->
+  <a href="https://sites.google.com/georgiasouthern.edu/michael-woodcock" class="card">
+    <div class="logo">
+      <img src="icons/briefcase.svg" alt="Google Site" data-glow="true">
+    </div>
+    <div class="card-text">
+      <h3>My Google Site</h3>
+      <p>My personal portfolio site. Some more detailed information is available on this site in the research showcase.</p>
+    </div>
+  </a>
 
-    <!-- Home Assistant -->
-    <a href="https://homeassistant.michaelwoodcock.duckdns.org" class="card">
-        <div class="logo">
-            <img src="icons/homeassistant-svgrepo-com.svg" alt="Home Assistant" data-glow="true">
-        </div>
-        <div class="card-text">
-            <h3>Home Assistant</h3>
-            <p>My smart home platform. Private access only.</p>
-        </div>
-    </a>
+  <!-- Home Assistant -->
+  <a href="https://homeassistant.michaelwoodcock.duckdns.org" class="card">
+    <div class="logo">
+      <img src="icons/homeassistant-svgrepo-com.svg" alt="Home Assistant" data-glow="true">
+    </div>
+    <div class="card-text">
+      <h3>Home Assistant</h3>
+      <p>My smart home platform. Private access only.</p>
+    </div>
+  </a>
 
-    <!-- Navidrome -->
-    <a href="https://navidrome.michaelwoodcock.duckdns.org" class="card navidrome-card">
-        <div class="logo">
-            <img src="icons/navidrome.svg" alt="Navidrome">
-        </div>
-        <div class="card-text">
-            <h3>Navidrome</h3>
-            <p>Personal music streaming server with my complete music library accessible anywhere. Guest access available.</p>
-        </div>
-    </a>
+  <!-- Navidrome -->
+  <a href="https://navidrome.michaelwoodcock.duckdns.org" class="card navidrome-card">
+    <div class="logo">
+      <img src="icons/navidrome.svg" alt="Navidrome">
+    </div>
+    <div class="card-text">
+      <h3>Navidrome</h3>
+      <p>Personal music streaming server with my complete music library accessible anywhere. Guest access available.</p>
+    </div>
+  </a>
 
-    <!-- Plex -->
-    <a href="https://plex.michaelwoodcock.duckdns.org" class="card">
-        <div class="logo">
-            <img src="icons/plex-icon.svg" alt="Plex" data-glow-hover="true">
-        </div>
-        <div class="card-text">
-            <h3>Plex</h3>
-            <p>Media server for movies, TV shows, and personal videos with streaming capabilities. Private access only.</p>
-        </div>
-    </a>
+  <!-- Plex -->
+  <a href="https://plex.michaelwoodcock.duckdns.org" class="card">
+    <div class="logo">
+      <img src="icons/plex-icon.svg" alt="Plex" data-glow-hover="true">
+    </div>
+    <div class="card-text">
+      <h3>Plex</h3>
+      <p>Media server for movies, TV shows, and personal videos with streaming capabilities. Private access only.</p>
+    </div>
+  </a>
 
-    <!-- Proxmox -->
-    <a href="https://proxmox.michaelwoodcock.duckdns.org" class="card">
-        <div class="logo">
-            <img src="icons/proxmox-svgrepo-com.svg" alt="Proxmox" data-glow-hover="true">
-        </div>
-        <div class="card-text">
-            <h3>Proxmox</h3>
-            <p>Virtualization platform for managing VMs and containers in my home lab. Guest access available.</p>
-        </div>
-    </a>
+  <!-- Proxmox -->
+  <a href="https://proxmox.michaelwoodcock.duckdns.org" class="card">
+    <div class="logo">
+      <img src="icons/proxmox-svgrepo-com.svg" alt="Proxmox" data-glow-hover="true">
+    </div>
+    <div class="card-text">
+      <h3>Proxmox</h3>
+      <p>Virtualization platform for managing VMs and containers in my home lab. Guest access available.</p>
+    </div>
+  </a>
 </div>
 
 <footer style="text-align: center; margin-top: 3rem; padding: 2rem 1rem; color: #aaaaaa; font-size: 0.9rem;">
-    <p>View my other work:</p>
-    <p>
-        <a href="https://sites.google.com/georgiasouthern.edu/michael-woodcock/home" style="color: #00bcd4; text-decoration: none;">My Portfolio Site</a> |
-        <a href="https://www.researchgate.net/profile/Michael-Woodcock-2" style="color: #00bcd4; text-decoration: none;">ResearchGate</a> |
-        <a href="https://www.printables.com/@MichaelW_20537/models" style="color: #00bcd4; text-decoration: none;">Printables</a> |
-        <a href="privacy.html" style="color: #00bcd4; text-decoration: none;">Privacy Policy</a>
-    </p>
+  <p>View my other work:</p>
+  <p>
+    <a href="https://sites.google.com/georgiasouthern.edu/michael-woodcock/home" style="color: #00bcd4; text-decoration: none;">My Portfolio Site</a> |
+    <a href="https://www.researchgate.net/profile/Michael-Woodcock-2" style="color: #00bcd4; text-decoration: none;">ResearchGate</a> |
+    <a href="https://www.printables.com/@MichaelW_20537/models" style="color: #00bcd4; text-decoration: none;">Printables</a> |
+    <a href="privacy.html" style="color: #00bcd4; text-decoration: none;">Privacy Policy</a>
+  </p>
 </footer>
+
 </body>
 </html>
