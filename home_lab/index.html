@@ -9,13 +9,11 @@
     font-family: 'Arial', sans-serif;
     background: #121212;
     color: #e0e0e0;
-    padding-left: 1rem;    
-    padding-right: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem;
     margin: 0;
   }
 
-  /* Back arrow button with background */
+  /* Back arrow button */
   .back-button {
     position: fixed;
     top: 1rem;
@@ -59,7 +57,7 @@
 
   h1 {
     text-align: center;
-    margin-top: 4rem; /* leave space for back button */
+    margin-top: 4rem;
     margin-bottom: 1rem;
     color: #ffffff;
   }
@@ -134,11 +132,23 @@
     filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(0, 255, 255, 0.8));
   }
 
-  /* Hover-only glow without color change */
-  .logo img[data-glow-hover="true"] {}
+  /* Navidrome continuous spin + glow */
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
 
-  .card:hover .logo img[data-glow-hover="true"] {
-    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.8));
+  @keyframes glow {
+    0%, 100% { filter: drop-shadow(0 0 6px rgba(0, 255, 255, 0.6)); }
+    50% { filter: drop-shadow(0 0 12px rgba(0, 255, 255, 1)); }
+  }
+
+  .navidrome-card .logo img {
+    transition: filter 0.3s ease;
+  }
+
+  .navidrome-card:hover .logo img {
+    animation: spin 2s linear infinite, glow 1.5s ease-in-out infinite;
   }
 
   .card-text {
@@ -224,9 +234,9 @@
     </a>
 
     <!-- Navidrome -->
-    <a href="https://navidrome.michaelwoodcock.duckdns.org" class="card">
+    <a href="https://navidrome.michaelwoodcock.duckdns.org" class="card navidrome-card">
         <div class="logo">
-            <img src="icons/navidrome.svg" alt="Navidrome" data-glow-hover="true">
+            <img src="icons/navidrome.svg" alt="Navidrome">
         </div>
         <div class="card-text">
             <h3>Navidrome</h3>
@@ -237,7 +247,7 @@
     <!-- Plex -->
     <a href="https://plex.michaelwoodcock.duckdns.org" class="card">
         <div class="logo">
-            <img src= "icons/plex-icon.svg" alt="Plex" data-glow-hover="true">
+            <img src="icons/plex-icon.svg" alt="Plex" data-glow-hover="true">
         </div>
         <div class="card-text">
             <h3>Plex</h3>
@@ -265,4 +275,6 @@
         <a href="https://www.printables.com/@MichaelW_20537/models" style="color: #00bcd4; text-decoration: none;">Printables</a> |
         <a href="privacy.html" style="color: #00bcd4; text-decoration: none;">Privacy Policy</a>
     </p>
-</footer
+</footer>
+</body>
+</html>
