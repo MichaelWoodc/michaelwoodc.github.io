@@ -1,0 +1,56 @@
+
+  <!-- ResearchGate -->
+  <a href="https://www.researchgate.net/profile/Michael-Woodcock-2" class="card">
+    <div class="logo">
+      <img src="icons/researchgate-net/RG.svg" alt="ResearchGate Logo" data-glow="true">
+    </div>
+    <div class="card-text">
+      <h3>ResearchGate</h3>
+      <p>View my publications and connect with me in the research community.</p>
+    </div>
+  </a>
+
+  <!-- GitHub -->
+  <a href="https://github.com/MichaelWoodc" class="card">
+    <div class="logo">
+      <img src="icons/general/github_black.svg" alt="GitHub Logo" data-glow="true">
+    </div>
+    <div class="card-text">
+      <h3>GitHub</h3>
+      <p>Check out my projects, contributions, and coding portfolio.</p>
+    </div>
+  </a>
+
+  <!-- Google Site -->
+  <a href="https://sites.google.com/georgiasouthern.edu/michael-woodcock" class="card">
+    <div class="logo">
+      <img src="icons/general/briefcase.svg" alt="Google Site Logo" data-glow="true">
+    </div>
+    <div class="card-text">
+      <h3>My Google Site / Portfolio</h3>
+      <p>My site featuring completed projects and other work.</p>
+    </div>
+  </a>
+
+  <!-- Google Scholar -->
+  <a href="https://scholar.google.com/citations?user=lNOVShYAAAAJ" class="card">
+    <div class="logo">
+      <img src="icons/general/google-scholar.svg" alt="Google Scholar Logo" data-glow="true">
+    </div>
+    <div class="card-text">
+      <h3>Google Scholar</h3>
+      <p>Browse my academic papers and research citations.</p>
+    </div>
+  </a>
+
+  <!-- ORCID -->
+  <a href="https://orcid.org/0009-0008-1731-7852" class="card">
+    <div class="logo">
+      <img src="icons/orcid-org/orcid-logo.svg" alt="ORCID Icon" data-glow="true">
+    </div>
+    <div class="card-text">
+      <h3>ORCID</h3>
+      <p>My researcher ID and profile with verified publications.</p>
+    </div>
+  </a>
+</div>

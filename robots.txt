@@ -1,3 +1,55 @@
+# Robots.txt
+# Anything starting with # is a comment and ignored by crawlers.
+
+# -------------------------------------------------------------
+# Explicitly blocking major search engine crawlers
+# (Not required, but helpful for clarity and documentation)
+# -------------------------------------------------------------
+
+# Block Googlebot
+User-agent: Googlebot
+Disallow: /
+
+# Block Googlebot-Image
+User-agent: Googlebot-Image
+Disallow: /
+
+# Block Bingbot
+User-agent: Bingbot
+Disallow: /
+
+# Block DuckDuckBot
+User-agent: DuckDuckBot
+Disallow: /
+
+# Block Yahoo! Slurp
+User-agent: Slurp
+Disallow: /
+
+# Block Yandex
+User-agent: Yandex
+Disallow: /
+
+# Block Baiduspider
+User-agent: Baiduspider
+Disallow: /
+
+# Block common SEO crawlers
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# -------------------------------------------------------------
+# Global rule blocking ALL other crawlers
+# This is the truly restrictive rule.
+# The above blocks are just explicit documentation.
+# -------------------------------------------------------------
 User-agent: *
 Disallow: /
-Sitemap:
+
+# End of file

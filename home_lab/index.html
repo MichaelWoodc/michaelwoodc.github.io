@@ -192,7 +192,294 @@
     <div class="card-text"><h3>Proxmox</h3><p>Virtualization platform for managing VMs and containers. Permissions required, guest access available.</p></div>
   </a>
 </div>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background: #121212;
+    color: #e0e0e0;
+    padding-left: 1rem;    
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    margin: 0;
+  }
 
+  /* Back arrow button with background */
+  .back-button {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(30, 30, 30, 0.9);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 999px;
+    padding: 0.4rem 0.9rem;
+    color: #ffffff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    z-index: 10000;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 6px rgba(0, 255, 255, 0.3);
+  }
+
+  .back-button svg {
+    width: 26px;
+    height: 26px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: transform 0.3s ease;
+  }
+
+  .back-button:hover {
+    background: rgba(0, 255, 255, 0.15);
+    color: #00bcd4;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+  }
+
+  .back-button:hover svg {
+    transform: translateX(-3px);
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: -1rem;
+    color: #ffffff;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #ffffff;
+  }
+
+  p {
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .card {
+    background: #1e1e1e;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    transform-origin: center center;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+  }
+
+  .card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.8);
+  }
+
+  .card.zoom-click {
+    transform: scale(5);
+    transition: transform 1s ease-in-out;
+    z-index: 9999;
+  }
+
+  .logo {
+    width: 120px;
+    height: 120px;
+    background: #333;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .logo img {
+    width: auto;
+    height: 100%;
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 1rem;
+    transition: filter 0.3s ease;
+  }
+
+  /* === Optional Glow Toggle === */
+  /* To disable glow on hover, comment out this entire section ↓ */
+  .logo img[data-glow-hover="true"] {}
+  .card:hover .logo img[data-glow-hover="true"] {
+    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.8));
+  }
+  /* ↑ Comment out to disable hover glow */
+
+  /* Always-on glow for dark mode visibility (ResearchGate) */
+  .banner[data-glow="true"] {
+    filter: brightness(0) invert(1) drop-shadow(0 0 6px rgba(0, 255, 255, 0.5));
+  }
+
+  .banner {
+    width: 100%;
+    max-width: 220px;
+    max-height: 25px; /* added per your request */
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    object-fit: contain;
+  }
+
+  .card-text {
+    text-align: center;
+  }
+
+  .card-text h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #ffffff;
+  }
+
+  .card-text p {
+    margin: 0.5rem 0 0 0;
+    font-size: 0.95rem;
+    color: #aaaaaa;
+  }
+
+  @media (max-width: 500px) {
+    .card {
+      padding: 0.8rem;
+    }
+    .logo {
+      width: 100px;
+      height: 100px;
+    }
+    .banner {
+      max-width: 180px;
+      max-height: 20px;
+    }
+    .card-text h3 {
+      font-size: 1.1rem;
+    }
+    .card-text p {
+      font-size: 0.85rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Back Arrow Button -->
+<button class="back-button" onclick="history.back()">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M15 18l-6-6 6-6" />
+  </svg>
+  <span>Back</span>
+</button>
+
+
+<h2>My Professional Links</h2>
+<p>Connect / Network with me or see my work below</p>
+
+<div class="grid">
+  <!-- LinkedIn -->
+  <a href="https://www.linkedin.com/in/michael-woodcock-2359b448/" class="card">
+    <div class="logo">
+      <img src="icons/general/linkedin-icon.svg" alt="LinkedIn Logo" data-glow-hover="true">
+    </div>
+    <img src="icons/general/linkedin.svg" alt="LinkedIn Banner" class="banner">
+    <div class="card-text">
+      <p>Connect with me professionally and explore my career highlights.</p>
+    </div>
+  </a>
+
+  <!-- ResearchGate -->
+  <a href="https://www.researchgate.net/profile/Michael-Woodcock-2" class="card">
+    <div class="logo">
+      <img src="icons/researchgate-net/RG.svg" alt="ResearchGate Logo" data-glow-hover="true">
+    </div>
+    <img src="icons/researchgate-net/researchgate-banner.svg" alt="ResearchGate Banner" class="banner" data-glow="true">
+    <div class="card-text">
+      <p>View my publications and connect with me in the research community.</p>
+    </div>
+  </a>
+
+  <!-- GitHub -->
+  <a href="https://github.com/MichaelWoodc" class="card">
+    <div class="logo">
+      <img src="icons/general/github_black.svg" alt="GitHub Logo" data-glow-hover="true">
+    </div>
+    <div class="card-text">
+      <h3>GitHub</h3>
+      <p>Check out my projects, contributions, and coding portfolio.</p>
+    </div>
+  </a>
+
+  <!-- My IT Laboratory -->
+  <a href="../home_lab/index.html" class="card">
+    <div class="logo">
+      <img src="icons/research/research-svgrepo-com2.svg" alt="IT Lab Logo" data-glow-hover="true">
+    </div>
+    <div class="card-text">
+      <h3>My IT Laboratory</h3>
+      <p>My digital portfolio and collection of self-hosted services including music streaming and virtualization environments.</p>
+    </div>
+  </a>    
+
+  <!-- Google Site -->
+  <a href="https://sites.google.com/georgiasouthern.edu/michael-woodcock" class="card">
+    <div class="logo">
+      <img src="icons/general/briefcase.svg" alt="Google Site Logo" data-glow-hover="true">
+    </div>
+    <div class="card-text">
+      <h3>My Google Site / Portfolio</h3>
+      <p>My site featuring completed projects and other work.</p>
+    </div>
+  </a>    
+
+  <!-- Google Scholar -->
+  <a href="https://scholar.google.com/citations?user=lNOVShYAAAAJ" class="card">
+    <div class="logo">
+      <img src="icons/general/google-scholar.svg" alt="Google Scholar Logo" data-glow-hover="true">
+    </div>
+    <div class="card-text">
+      <h3>Google Scholar</h3>
+      <p>Browse my academic papers and research citations.</p>
+    </div>
+  </a>
+
+  <!-- ORCID (icon + banner) -->
+  <a href="https://orcid.org/0009-0008-1731-7852" class="card">
+    <div class="logo">
+      <img src="icons/orcid-org/orcid-logo.svg" alt="ORCID Icon" data-glow-hover="true">
+    </div>
+    <img src="icons/orcid-org/orcid.svg" alt="ORCID Banner" class="banner">
+    <div class="card-text">
+      <p>My researcher ID and profile with verified publications.</p>
+    </div>
+  </a>
+
+  <!-- Email -->
+  <a href="../contact_info/index.html" class="card">
+    <div class="logo">
+      <img src="icons/contact/email.svg" alt="Email Logo" data-glow-hover="true">
+    </div>
+    <div class="card-text">
+      <h3>Email</h3>
+      <p>Reach out to me directly for collaboration or inquiries.</p>
+    </div>
+  </a>
+</div>
 <footer style="text-align: center; margin-top: 3rem; padding: 2rem 1rem; color: #aaaaaa; font-size: 0.9rem;">
   <p>View my other work:</p>
   <p>
