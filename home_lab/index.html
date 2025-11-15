@@ -153,20 +153,15 @@
 </button>
 
 <h1>My Home Lab</h1>
-<p><small>Feel free to click the first card to view my examples of research conductable through a browser! All services are hosted on my home lab server(s). Some services are private and require access permissions. Please contact me for guest access to those services.</small></p>
+<p><small>Feel free to click the various cards to view examples of services and containers 
+  hosted and implemented by me! All services are hosted on my home lab server(s). 
+  Some services are private and require access permissions. Please contact me for 
+  guest access to those services.  If you're greeted with a login screen, 
+  do not try and guess credentials, 
+  your IP address will be blocked, and you will no longer be able to view the page.</small></p>
 
 <div class="grid">
-  <!-- Research Showcase -->
-  <a href="../research_showcase/index.html" class="card">
-    <div class="logo"><img src="svg-icons/flask.svg" alt="Research Showcase" data-glow="true"></div>
-    <div class="card-text"><h3>Research Showcase</h3><p>Portfolio of browser-based research tools and experiments.</p></div>
-  </a>
 
-  <!-- My Google Site (encoded) -->
-  <a data-href="aHR0cHM6Ly9zaXRlcy5nb29nbGUuY29tL2dlb3JnaWFzb3V0aGVybi5lZHUvbWljaGFlbC13b29kY29jaw==" class="card encoded-link">
-    <div class="logo"><img src="svg-icons/briefcase.svg" alt="Google Site" data-glow="true"></div>
-    <div class="card-text"><h3>My Google Site</h3><p>My personal portfolio site with more detailed information.</p></div>
-  </a>
 
   <!-- Home Assistant -->
   <a data-href="aHR0cHM6Ly9ob21lYXNzaXN0YW50Lm1pY2hhZWx3b29kY29jay5kdWNrZG5zLm9yZw==" class="card encoded-link">
@@ -187,10 +182,10 @@
   </a>
 
   <!-- Proxmox -->
-  <a data-href="aHR0cHM6Ly9wcm94bW94Lm1pY2hhZWx3b29kY29jay5kdWNrZG5zLm9yZw==" class="card encoded-link">
-    <div class="logo"><img src="svg-icons/proxmox-svgrepo-com.svg" alt="Proxmox" data-glow-hover="true"></div>
-    <div class="card-text"><h3>Proxmox</h3><p>Virtualization platform for managing VMs and containers. Permissions required, guest access available.</p></div>
-  </a>
+<a data-href="aHR0cHM6Ly9wcm94bW94Lm1pY2hhZWx3b29kY29jay5kdWNrZG5zLm9yZw==" class="card encoded-link" data-bg-gif data-hover-gif="url('../images_and_icons/digital_rain.gif')">
+<div class="logo"><img src="svg-icons/proxmox-svgrepo-com.svg" alt="Proxmox" data-glow-hover="true"></div>
+<div class="card-text"><h3>Proxmox</h3><p>Virtualization platform for managing VMs and containers. Permissions required, guest access available.</p></div>
+</a>
 </div>
 <style>
   body {
@@ -380,12 +375,12 @@
 <body>
 
 <!-- Back Arrow Button -->
-<button class="back-button" onclick="history.back()">
+<!-- <button class="back-button" onclick="history.back()">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M15 18l-6-6 6-6" />
   </svg>
   <span>Back</span>
-</button>
+</button> -->
 
 
 <h2>My Professional Links</h2>
@@ -468,7 +463,17 @@
       <p>My researcher ID and profile with verified publications.</p>
     </div>
   </a>
+  <!-- Research Showcase -->
+  <a href="../research_showcase/index.html" class="card">
+    <div class="logo"><img src="svg-icons/flask.svg" alt="Research Showcase" data-glow="true"></div>
+    <div class="card-text"><h3>Research Showcase</h3><p>Portfolio of browser-based research tools and experiments.</p></div>
+  </a>
 
+  <!-- My Google Site (encoded) -->
+  <a data-href="aHR0cHM6Ly9zaXRlcy5nb29nbGUuY29tL2dlb3JnaWFzb3V0aGVybi5lZHUvbWljaGFlbC13b29kY29jaw==" class="card encoded-link">
+    <div class="logo"><img src="svg-icons/briefcase.svg" alt="Google Site" data-glow="true"></div>
+    <div class="card-text"><h3>My Google Site</h3><p>My personal portfolio site with more detailed information.</p></div>
+  </a>
   <!-- Email -->
   <a href="../contact_info/index.html" class="card">
     <div class="logo">
@@ -486,7 +491,7 @@
     <a data-href="aHR0cHM6Ly9zaXRlcy5nb29nbGUuY29tL2dlb3JnaWFzb3V0aGVybi5lZHUvbWljaGFlbC13b29kY29jay9ob21l" class="encoded-link" style="color: #00bcd4; text-decoration: none;">My Portfolio Site</a> |
     <a data-href="aHR0cHM6Ly93d3cucmVzZWFyY2hnYXRlLm5ldC9wcm9maWxlL01pY2hhZWwtV29vZGNvY2stMg==" class="encoded-link" style="color: #00bcd4; text-decoration: none;">ResearchGate</a> |
     <a data-href="aHR0cHM6Ly93d3cucHJpbnRhYmxlcy5jb20vQE1pY2hhZWxXXzIwNTM3L21vZGVscw==" class="encoded-link" style="color: #00bcd4; text-decoration: none;">Printables</a> |
-    <a href="privacy.html" style="color: #00bcd4; text-decoration: none;">Privacy Policy</a>
+    <a href="../privacy.html" style="color: #00bcd4; text-decoration: none;">Privacy Policy</a>
   </p>
 </footer>
 
@@ -502,12 +507,36 @@
     try { return atob(str); } catch { return "#"; }
   }
 
-  document.querySelectorAll('.encoded-link').forEach(link => {
-    link.addEventListener('click', e => {
+  // Add click effect to all cards
+  document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('click', function(e) {
       e.preventDefault();
-      const encoded = link.getAttribute('data-href');
-      const decoded = decodeBase64(encoded);
-      window.open(decoded, '_blank');
+      
+      // Add the zoom effect
+      this.classList.add('zoom-click');
+      
+      setTimeout(() => {
+        // Handle different types of links
+        if (this.classList.contains('encoded-link')) {
+          // Handle encoded links
+          const encoded = this.getAttribute('data-href');
+          const decoded = decodeBase64(encoded);
+          window.open(decoded, '_blank');
+        } else if (this.getAttribute('href')) {
+          // Handle regular links
+          const href = this.getAttribute('href');
+          const target = this.getAttribute('target');
+          
+          if (target === '_blank') {
+            window.open(href, '_blank');
+          } else {
+            window.location.href = href;
+          }
+        }
+        
+        // Remove zoom effect after navigation
+        this.classList.remove('zoom-click');
+      }, 1000);
     });
   });
 </script>
