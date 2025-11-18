@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Conditional Redirect with Fallback</title>
+  <style>
+    /* Simple spinner */
+    .spinner {
+      border: 8px solid #f3f3f3;
+      border-top: 8px solid #3498db;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+      margin: 20px auto;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 50px;
+    }
+  </style>
+  <script>
+    async function checkAndRedirect() {
+      const primaryUrl = "https://michaelwoodcock.duckdns.org";
+      const fallbackUrl = "https://michaelwoodc.github.io/professional_links/index.html";
+
+      document.getElementById("status").textContent = "Checking target page...";
+      document.getElementById("spinner").style.display = "block";
+
+      let reachable = false;
+      try {
+        const response = await fetch(primaryUrl, { method: "HEAD" });
+        if (response.ok) {
+          reachable = true;
+        }
+      } catch (error) {
+        reachable = false;
+      }
+
+      // Wait 10 seconds before redirecting
+      setTimeout(() => {
+        document.getElementById("spinner").style.display = "none";
+        if (reachable) {
+          document.getElementById("status").textContent = "Redirecting to primary site...";
+          window.location.href = primaryUrl;
+        } else {
+          document.getElementById("status").textContent = "Primary site down, redirecting to fallback...";
+          window.location.href = fallbackUrl;
+        }
+      }, 2000);
+    }
+
+    window.onload = checkAndRedirect;
+  </script>
+</head>
+<body>
+  <div id="spinner" class="spinner" style="display:none;"></div>
+  <p id="status">Preparing to check...</p>
+</body>
+</html>
