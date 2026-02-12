@@ -33,17 +33,6 @@
     box-shadow: 0 0 6px rgba(0, 255, 255, 0.3);
   }
 
-  .back-button svg {
-    width: 26px;
-    height: 26px;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 2.5;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    transition: transform 0.3s ease;
-  }
-
   .back-button:hover {
     background: rgba(0, 255, 255, 0.15);
     color: #00bcd4;
@@ -51,62 +40,56 @@
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
   }
 
-  .back-button:hover svg {
-    transform: translateX(-3px);
-  }
-
   /* FULL-VIEWPORT SLIDESHOW */
   .slideshow {
     position: relative;
     width: 100vw;
-    height: 100vh; /* always full screen */
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
   }
 
-  /* Slide wrapper */
+  /* SAFE IMAGE AREA — NEVER OVERLAPS UI */
   .slide {
     position: absolute;
-    max-width: 100vw;
-    max-height: 100vh;
+    top: 0;
+    left: 0;
+    width: calc(100vw - 20px);      /* 10px padding left/right */
+    height: calc(100vh - 120px);    /* compact UI zone */
+    padding: 10px;                  /* guaranteed padding */
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: transform 400ms ease;
   }
 
-  /* Image ALWAYS fits fully with 10px padding */
+  /* Image ALWAYS fits inside padded safe area */
   .slide img {
-    width: calc(100% - 20px);   /* 10px padding left + right */
-    height: calc(100% - 20px);  /* 10px padding top + bottom */
-    margin: 10px;               /* actual spacing */
+    width: 100%;
+    height: 100%;
     object-fit: contain;
     border-radius: 6px;
     box-shadow: 0 20px 60px rgba(0,0,0,0.7);
     display: block;
-    cursor: zoom-in;
-    transition: transform 0.3s ease;
-  }
-
-  /* Zoomed mode */
-  .slide img.zoomed {
-    transform: scale(1.8);
-    cursor: zoom-out;
+    cursor: pointer; /* click opens link */
+    transition: transform 0.15s ease-out;
   }
 
   .off-right { transform: translateX(100vw); }
   .off-left  { transform: translateX(-100vw); }
   .center    { transform: translateX(0); }
 
+  /* COMPACT CONTROLS */
   .controls {
     position: fixed;
-    bottom: 80px;
+    bottom: 70px;
     width: 100%;
     display: flex;
     justify-content: center;
-    gap: 12px;
+    gap: 10px;
     z-index: 1000;
   }
 
@@ -114,42 +97,41 @@
     background: #1f2937;
     color: #e5e7eb;
     border: 1px solid #374151;
-    padding: 10px 16px;
-    font-size: 14px;
+    padding: 6px 12px;
+    font-size: 13px;
     border-radius: 6px;
     cursor: pointer;
   }
 
-  button.control:hover {
-    background: #374151;
-  }
-
   .counter {
     position: fixed;
-    bottom: 60px;
+    bottom: 50px;
     width: 100%;
     text-align: center;
-    font-size: 13px;
+    font-size: 12px;
     color: #9ca3af;
+    z-index: 1000;
   }
 
+  /* THUMBNAILS — NO SCROLLING EVER */
   .thumb-strip {
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 60px;
+    height: 50px;
     background: rgba(0,0,0,0.4);
     display: flex;
     justify-content: center;
-    gap: 8px;
-    padding: 6px;
+    align-items: center;
+    gap: 6px;
+    padding: 4px;
     box-sizing: border-box;
-    overflow-x: auto;
-    scroll-behavior: smooth;
+    overflow: hidden; /* NO SCROLLING */
+    flex-wrap: wrap;  /* wrap instead of scroll */
   }
 
   .thumb-strip img {
-    height: 48px;
+    height: 40px;
     border-radius: 4px;
     cursor: pointer;
     opacity: 0.6;
@@ -316,12 +298,22 @@ document.addEventListener("keydown", (e) => {
   if (e.key === " ") toggleAuto();
 });
 
-// CLICK TO ZOOM
-document.addEventListener("click", (e) => {
-  if (e.target.tagName === "IMG" && e.target.closest(".slide")) {
-    e.target.classList.toggle("zoomed");
-  }
-});
+// SCROLL WHEEL ZOOM
+let zoomLevel = 1;
+
+slideshow.addEventListener("wheel", (e) => {
+  e.preventDefault();
+
+  const img = current.querySelector("img");
+  if (!img) return;
+
+  if (e.deltaY < 0) zoomLevel += 0.1;   // zoom in
+  else zoomLevel -= 0.1;               // zoom out
+
+  zoomLevel = Math.max(1, Math.min(3, zoomLevel));
+
+  img.style.transform = `scale(${zoomLevel})`;
+}, { passive: false });
 
 updateCounter();
 updateThumbnails();
