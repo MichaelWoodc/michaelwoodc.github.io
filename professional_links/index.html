@@ -181,6 +181,18 @@
     </div>
   </a>
 
+  <!-- Graduation Countdown -->
+  <a class="card" id="grad-countdown-card">
+    <div class="logo">
+      <img src="../svg-icons/graduation.svg" alt="Countdown" data-glow-hover="true">
+    </div>
+    <div class="card-text">
+      <h3>Graduation Countdown</h3>
+      <p id="grad-countdown">Calculating…</p>
+      Wednesday, May 13th 9am<br>
+      Enmarket Arena in Savannah
+    </div>
+  </a>
   <!-- GitHub -->
   <a href="https://github.com/MichaelWoodc" class="card">
     <div class="logo">
@@ -251,6 +263,7 @@
     <div class="logo"><img src="../svg-icons/flask.svg" alt="Research Showcase" data-glow="true"></div>
     <div class="card-text"><h3>Research Showcase</h3><p>Portfolio of browser-based research tools and experiments.</p></div>
   </a>
+
 
   <!-- My Google Site (encoded) -->
   <!-- <a data-href="aHR0cHM6Ly9zaXRlcy5nb29nbGUuY29tL2dlb3JnaWFzb3V0aGVybi5lZHUvbWljaGFlbC13b29kY29jaw==" class="card encoded-link">
@@ -593,6 +606,30 @@
       }, 1000);
     });
   });
+function updateGradCountdown() {
+  const target = new Date(2026, 4, 13, 9, 0, 0); // May 13 2026, 9 AM
+  const now = new Date();
+  const diff = target - now;
+
+  const el = document.getElementById("grad-countdown");
+
+  if (diff <= 0) {
+    el.textContent = "🎓 It's graduation day!";
+    return;
+  }
+
+  const seconds = Math.floor(diff / 1000);
+  const days = Math.floor(seconds / 86400);
+  const hours = Math.floor((seconds % 86400) / 3600);
+  const minutes = Math.floor((seconds % 3600) / 60);
+  const secs = seconds % 60;
+
+  el.textContent = `${days} days, ${hours} hrs, ${minutes} min, ${secs} sec`;
+}
+
+updateGradCountdown();
+setInterval(updateGradCountdown, 1000);
+
 </script>
 
 </body>
