@@ -1,0 +1,29 @@
+var _____WB$wombat$assign$function_____=function(name){return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name))||self[name];};if(!self.__WB_pmw){self.__WB_pmw=function(obj){this.__WB_source=obj;return this;}}{
+let window = _____WB$wombat$assign$function_____("window");
+let self = _____WB$wombat$assign$function_____("self");
+let document = _____WB$wombat$assign$function_____("document");
+let location = _____WB$wombat$assign$function_____("location");
+let top = _____WB$wombat$assign$function_____("top");
+let parent = _____WB$wombat$assign$function_____("parent");
+let frames = _____WB$wombat$assign$function_____("frames");
+let opens = _____WB$wombat$assign$function_____("opens");
+;/*FB_PKG_DELIM*/
+
+__d("VultureJSSampleRatesLoader",["VultureJSSampleRates","asyncToGeneratorRuntime"],(function(t,n,r,o,a,i,l){"use strict";function e(){return s.apply(this,arguments)}function s(){return s=n("asyncToGeneratorRuntime").asyncToGenerator(function*(){return r("VultureJSSampleRates").sample_rates}),s.apply(this,arguments)}l.loadSampleRates=e}),98);
+}
+
+/*
+     FILE ARCHIVED ON 21:57:53 May 03, 2026 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 01:20:14 May 04, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  capture_cache.get: 1.664
+  load_resource: 28.651
+  PetaboxLoader3.resolve: 6.456
+  PetaboxLoader3.datanode: 20.563
+*/

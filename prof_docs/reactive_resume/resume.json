@@ -1,0 +1,218 @@
+{
+  "basics": {
+    "name": "Michael Woodcock",
+    "label": "Researcher • Developer • Engineer",
+    "email": "mw24396@georgiasouthern.edu",
+    "phone": "(912) 484-1369",
+    "location": {
+      "address": "8613 Whitefield Ave",
+      "city": "Savannah",
+      "region": "GA",
+      "postalCode": "31406",
+      "country": "USA"
+    },
+    "url": "https://michaelwoodc.github.io/professional_links/",
+    "summary": "Interdisciplinary researcher and engineer integrating computing, psychology, and hardware design to build tools that advance research, learning, and human performance."
+  },
+
+  "education": [
+    {
+      "institution": "Georgia Southern University",
+      "area": "Information Technology (Minor: Psychology)",
+      "studyType": "B.S.",
+      "gpa": "3.9",
+      "startDate": "2018",
+      "endDate": "2026",
+      "courses": [
+        "Psychology coursework GPA: 4.0",
+        "S-STEM Scholar",
+        "ELITE Scholar"
+      ]
+    },
+    {
+      "institution": "Yamaha Technical Academy",
+      "studyType": "Technical Certification",
+      "endDate": "2016"
+    },
+    {
+      "institution": "K-Tech (Kawasaki) Technical University",
+      "studyType": "Technical Certification",
+      "endDate": "2015"
+    },
+    {
+      "institution": "Jenkins High School",
+      "studyType": "High School Diploma"
+    }
+  ],
+
+  "awards": [
+    {
+      "title": "President’s List",
+      "date": "2025",
+      "summary": "Fall 2025, Spring 2025, Fall 2024, Spring 2019"
+    },
+    {
+      "title": "Dean’s List",
+      "date": "2024",
+      "summary": "Spring 2024, Fall 2018"
+    },
+    {
+      "title": "Honorary Recognition for Departmental Service",
+      "date": "2026",
+      "summary": "Award created specifically in recognition of exceptional service to the Psychology Department."
+    },
+    {
+      "title": "1st Place Poster – PCEC Symposium",
+      "date": "2026",
+      "summary": "Low-Cost Centimeter-Level Robot Localization; received cash prize and top RocketJudge ratings."
+    },
+    {
+      "title": "Outstanding Paper Presentation – SEPA",
+      "date": "2021",
+      "summary": "Awarded for research on mask-wearing and emotion recognition."
+    },
+    {
+      "title": "Outstanding Student Scholar Award – GSPS",
+      "date": "2025",
+      "summary": "Awarded for CRAT mood/mindset research project."
+    }
+  ],
+
+  "work": [
+    {
+      "name": "Georgia Southern University",
+      "position": "Student Worker, Tutor, Teaching Assistant",
+      "startDate": "2019-09",
+      "endDate": "2026-05",
+      "summary": "Supported faculty across multiple departments through tutoring, technical troubleshooting, research assistance, and instructional material development.",
+      "highlights": [
+        "Tutored students and assisted during hands-on labs",
+        "Reviewed submissions and created assignment manuals",
+        "Resolved technical issues with ITS",
+        "Supported research computing and lab operations"
+      ]
+    },
+    {
+      "name": "Sonic Motorsports",
+      "position": "Design Engineer",
+      "startDate": "2016-05",
+      "endDate": "2026-01",
+      "summary": "Engineered custom parts and solutions for high-performance and vintage vehicles.",
+      "highlights": [
+        "Restored and optimized Ferrari 250 GTO, Acura NSX, and other specialty vehicles",
+        "Performed advanced diagnostics on vehicles deemed irreparable by other shops",
+        "Designed and fabricated custom components"
+      ]
+    },
+    {
+      "name": "Honda Yamaha of Savannah",
+      "position": "Powersports Technician",
+      "startDate": "2013-05",
+      "endDate": "2016-05",
+      "summary": "Diagnosed and repaired mechanical and electrical issues on motorcycles and powersports equipment.",
+      "highlights": [
+        "Performed intensive diagnostics on malfunctioning equipment",
+        "Managed inventory and improved service workflow",
+        "Provided diagnostic insights to manufacturers"
+      ]
+    },
+    {
+      "name": "Boaen Mechanical",
+      "position": "Estimator / Junior Project Manager",
+      "startDate": "2011-05",
+      "endDate": "2013-05",
+      "summary": "Managed project estimation, materials, and job progress for mechanical contracting projects.",
+      "highlights": [
+        "Returned company to profitability through accurate cost estimation",
+        "Coordinated materials and supplies for job sites",
+        "Reported progress to senior management"
+      ]
+    }
+  ],
+
+  "research": [
+    {
+      "name": "SCIP Lab – Georgia Southern University",
+      "position": "Undergraduate Research Associate",
+      "startDate": "2019",
+      "endDate": "2026",
+      "summary": "Six-year research associate contributing to emotion recognition, mask occlusion, and test-format research.",
+      "highlights": [
+        "Co-authored multiple peer-reviewed publications",
+        "Developed DANVA-2 PC and web-based testing tools",
+        "Created masked facial stimuli used in cross-cultural COVID-era studies",
+        "Recovered 20 years of lab data from a failing hard drive"
+      ]
+    },
+    {
+      "name": "Ratsketball Project",
+      "position": "Research Assistant",
+      "startDate": "2023",
+      "summary": "Designed and built the 3D-printed operant chamber used in the Ratsketball study.",
+      "highlights": [
+        "Constructed rat basketball court and automated scoring system",
+        "Co-authored publication on generative responding"
+      ]
+    },
+    {
+      "name": "CRAT Mood/Mindset Study",
+      "position": "Technical Lead",
+      "startDate": "2024",
+      "endDate": "2025",
+      "summary": "Developed PsychoPy CRAT tasks enabling a year-long experimental study.",
+      "highlights": [
+        "Supported 10 research assistants",
+        "Led to GSPS Outstanding Student Scholar Award"
+      ]
+    }
+  ],
+
+  "publications": [
+    {
+      "name": "Facial Occlusion with Medical Masks: Impacts on Emotion Recognition",
+      "publisher": "Quarterly Journal of Experimental Psychology",
+      "date": "2025"
+    },
+    {
+      "name": "Does Format Matter? Investigating the Impact of Test Format on Facial Emotion Recognition",
+      "publisher": "Psychological Reports",
+      "date": "2025"
+    },
+    {
+      "name": "Ratsketball: Using Low-Cost 3D Printed Operant Chambers to Probe for Generative Learning",
+      "publisher": "Mexican Journal of Behavior Analysis",
+      "date": "2024"
+    }
+  ],
+
+  "skills": [
+    {
+      "name": "Programming",
+      "keywords": ["Python", "JavaScript", "MATLAB", "HTML"]
+    },
+    {
+      "name": "Engineering & Fabrication",
+      "keywords": ["3D Printing", "Autodesk Inventor", "SolidWorks", "Welding", "Electronics Repair"]
+    },
+    {
+      "name": "Research Tools",
+      "keywords": ["PsychoPy", "Qualtrics", "Eye Tracking", "Behavioral Analysis Tools"]
+    }
+  ],
+
+  "projects": [
+    {
+      "name": "OCER-2 Career Exploration Platform",
+      "summary": "Full website built to replace a proposed wiki; now distributed nationally through STP.",
+      "url": "https://teachpsych.github.io/STP-Career-Exploration-Resource-for-Psychology-Majors/"
+    },
+    {
+      "name": "DANVA-2 PC & Web Tools",
+      "summary": "Standalone PC installer and Qualtrics-integrated web version for emotion recognition testing."
+    },
+    {
+      "name": "Eye-Tracking Device",
+      "summary": "Low-cost eye-tracking hardware built for faculty research."
+    }
+  ]
+}

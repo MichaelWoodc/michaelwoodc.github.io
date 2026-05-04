@@ -1,0 +1,27 @@
+var _____WB$wombat$assign$function_____=function(name){return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name))||self[name];};if(!self.__WB_pmw){self.__WB_pmw=function(obj){this.__WB_source=obj;return this;}}{
+let window = _____WB$wombat$assign$function_____("window");
+let self = _____WB$wombat$assign$function_____("self");
+let document = _____WB$wombat$assign$function_____("document");
+let location = _____WB$wombat$assign$function_____("location");
+let top = _____WB$wombat$assign$function_____("top");
+let parent = _____WB$wombat$assign$function_____("parent");
+let frames = _____WB$wombat$assign$function_____("frames");
+let opens = _____WB$wombat$assign$function_____("opens");
+"use strict";new function(){var pp,script;window["ping_a7a825b7-e9df-c6a1-10f8-412bb007e4a6"]==null&&(window["ping_a7a825b7-e9df-c6a1-10f8-412bb007e4a6"]=!0,pp={},document.head&&(window.localStorage&&window.localStorage.setItem("a7a825b7-e9df-c6a1-10f8-412bb007e4a6_pp",JSON.stringify(pp)),script=document.createElement("SCRIPT"),script.async=!0,script.src="https://web.archive.org/web/20220919164036/https://mx.technolutions.net/ping?id=a7a825b7-e9df-c6a1-10f8-412bb007e4a6&sid=2X5jtmNiTtirEMcJpU6B_HFPGR-5uGxmma8WhBoZdlU3VugafC57MBbPQeMA5Z_GJbuxH0O6vwVgq40iQlg9qfah7QfYqL4X6JVFeoaWC5NSbTId5i2c6qBa6wk8e27qrS2DDNV7FfZoMsYRY2tbRA&hid=6dfd3cae-241c-18d3-96a1-9ab342052de5",document.head.appendChild(script)))};
+}
+
+/*
+     FILE ARCHIVED ON 16:40:36 Sep 19, 2022 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 01:17:12 May 04, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  capture_cache.get: 0.349
+  load_resource: 65.957
+  PetaboxLoader3.resolve: 49.401
+  PetaboxLoader3.datanode: 16.115
+*/

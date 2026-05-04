@@ -1,0 +1,236 @@
+var _____WB$wombat$assign$function_____=function(name){return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name))||self[name];};if(!self.__WB_pmw){self.__WB_pmw=function(obj){this.__WB_source=obj;return this;}}{
+let window = _____WB$wombat$assign$function_____("window");
+let self = _____WB$wombat$assign$function_____("self");
+let document = _____WB$wombat$assign$function_____("document");
+let location = _____WB$wombat$assign$function_____("location");
+let top = _____WB$wombat$assign$function_____("top");
+let parent = _____WB$wombat$assign$function_____("parent");
+let frames = _____WB$wombat$assign$function_____("frames");
+let opens = _____WB$wombat$assign$function_____("opens");
+// Custom UI scripts for CMS/WP sites
+// Last updated: 7/24/16
+
+jQuery.noConflict();
+jQuery(document).ready(function($){	
+	// QuickLinks
+	$("#nav-button-quicklinks, .quicklinks-close").click(function(){
+		$("#quicklinks-panel").slideToggle().toggleClass("open");
+		$("#nav-button-quicklinks").toggleClass("open");
+	});	
+		//Lightbox effect	
+	if ( jQuery.isFunction(jQuery.fn.lightbox) ) {
+	jQuery('.lightbox').lightbox();
+	}	
+	
+	//Legacy functionality for WP sites
+	jQuery('.tabswrap').tabs();
+	jQuery('.accordion').accordion();
+	jQuery('.cycle').cycle();
+	jQuery('.news_item').first().css('border-top', 'none');
+	if (jQuery('.autolist').length ) { jQuery('.autolist').autocomplete({ source: autolist }); }
+	jQuery(".btn_toggle").click(function(){ jQuery(this).next().slideToggle();});
+	jQuery(".btn_toggle").keypress(function(){ jQuery(this).next().slideToggle();});
+	jQuery('.btn_dropmenu').click(function(){jQuery('.dropmenu').slideToggle('fast');});
+	jQuery('.btn_dropmenu').keypress(function(){jQuery('.dropmenu').slideToggle('fast');});
+	jQuery(".visitwebsite").prepend('<img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/images/ui/website.png" alt=""   /> ');
+	jQuery(".download").prepend('<img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE//images/ui/download.png" alt="" /> ');
+	jQuery(".emailaddress").prepend('<img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/images/ui/icon_email.png" alt="" /> ');
+	jQuery(".success").prepend('<img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/images/ui/icon_success.png" alt="" /> ');
+	jQuery(".pdf").prepend('<img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/images/ui/pdf.png" alt="" /> ');
+	jQuery(".msword").prepend('<img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/images/ui/msword.png" alt="" /> ');
+	jQuery(".excel").prepend('<img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/images/ui/excel.png" alt="" /> ');
+	jQuery(".attention").prepend('<img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/images/ui/attention.png" alt="" /> &nbsp;');
+	jQuery(".viewmap").append(' <img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/images/ui/icon_viewmap.png" alt="" /> ');
+	jQuery(".moreinfo").prepend(' <img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/images/ui/icon_info.png" alt="" /> ');
+	jQuery(".watchvideo").prepend(' <img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/images/ui/icon_video.png" alt="" /> ');
+	jQuery(".contactinfo").prepend(' <img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/images/ui/contactinfo.png" alt="" /> ');
+	jQuery(".podcast").prepend(' <img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/images/ui/podcast.png" alt=""> ');
+	jQuery(".bluestar").prepend(' <img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/images/ui/bluestar.png" alt="" /> ');
+	jQuery(".picinfo").prepend(' <img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/images/ui/picinfo.png" alt="" /> ');
+	jQuery(".profile").prepend(' <img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/images/ui/profile.png" alt="" /> ');
+	jQuery(".form").prepend(' <img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/images/ui/onlineform.png" alt="" /> ');
+	jQuery(".moreinfo2").prepend(' <img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/images/ui/picinfo.png" alt="" /> ');
+	jQuery(".checkmark").prepend(' <img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/images/ui/checkmark.png" alt="" /> ');
+	jQuery(".flag").prepend(' <img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/images/ui/flag.png" alt="" /> ');
+	jQuery(".users").prepend(' <img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/images/ui/users.png" alt="" /> ');
+	jQuery(".archives").prepend(' <img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/images/ui/archives.png" alt="" /> ');
+	jQuery(".icon_time").prepend(' <img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/images/ui/icon_time.png" alt="" /> ');
+	jQuery(".facebook").prepend('<img src="/web_templates/global/img/icons/facebook.png" alt="Facebook" /> ');
+	jQuery(".flickr").prepend('<img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/web_templates/global/img/icons/flickr.png" alt="Flickr" /> ');
+	jQuery(".googleplus").prepend('<img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/web_templates/global/img/icons/googleplus.png" alt="Google Plus" /> ');
+	jQuery(".instagram").prepend('<img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/web_templates/global/img/icons/instagram.png" alt="Instagram" /> ');
+	jQuery(".linkedin").prepend('<img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/web_templates/global/img/icons/linkedin.png" alt="LinkedIn" /> ');
+	jQuery(".pinterest").prepend('<img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/web_templates/global/img/icons/pinterest.png" alt="Pinterest" /> ');
+	jQuery(".snapchat").prepend('<img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/web_templates/global/img/icons/snapchat.png" alt="Snapchat" /> ');
+	jQuery(".twitter").prepend('<img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/web_templates/global/img/icons/twitter.png" alt="Twitter" /> ');
+	jQuery(".youtube").prepend('<img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/web_templates/global/img/icons/youtube.png" alt="YouTube" /> ');
+	
+});
+
+
+
+// Toggle Accordion UI
+jQuery.noConflict();
+jQuery(document).ready(function($){
+var toggleplus = {
+'list-style' : 'none',
+'background-image' : 'url(//cdn.georgiasouthern.edu/img/arrow_rightv2.png)',
+'background-repeat' : 'no-repeat',
+'background-position' : 'left center',
+'padding-left' : '23px',
+'margin-left': '0px',
+'display': 'block'
+}
+	
+var toggleminus = {
+'list-style' : 'none',
+'background-image' : 'url(//cdn.georgiasouthern.edu/img/arrow_down.png)',
+'background-repeat' : 'no-repeat',
+'background-position' : 'left center',
+'padding-left' : '23px',
+'margin-left': '0px'
+}
+
+var subtoggleplus = {
+'list-style' : 'none',
+'background-image' : 'url(//cms.georgiasouthern.edu/~gsu/web_templates/CORE/images/ui/arrow_sub_right.png)',
+'background-repeat' : 'no-repeat',
+'background-position' : 'left center',
+'padding-left' : '23px',
+'margin-left': '0px'
+}
+
+var subtoggleminus = {
+'list-style' : 'none',
+'background-image' : 'url(//cms.georgiasouthern.edu/~gsu/web_templates/CORE/images/ui/arrow_sub_down.png)',
+'background-repeat' : 'no-repeat',
+'background-position' : 'left center',
+'padding-left' : '23px',
+'margin-left': '0px'
+}
+jQuery(".btn_toggle").each(function(){
+	$(this).attr('tabindex',0);
+});	
+//New HelpOnClick
+clickInterval = window.setInterval(function(){
+	jQuery('.helponc-iconpreview').each(function(){
+		jQuery(this).attr('tabindex',0);
+		jQuery(this).attr('onkeypress','maximizesmallwindow()');
+	});
+
+}, 30);
+//New Popup HelpOnClick
+onClickInterval = window.setInterval(function(){
+	jQuery('.textareaDiv').each(function(){
+		jQuery(this).attr('onkeypress','handleInvitationClick()()');
+	});
+
+}, 30);
+interval = window.setInterval(function(){
+	jQuery('#__livechat-assist').each(function(){
+		var title = jQuery(this).children("img").attr('title');
+		jQuery(this).children("img").attr('alt',title);
+		clearInterval(interval);
+    });
+	}, 3000);
+		
+	jQuery("#__livechat-assist").each(function(){
+		jQuery(this).attr('tabindex',0);
+	});	
+	function genUrlVars(url){
+		var vars = [], hash;
+		var hashes = url.slice(url.indexOf('?') +1).split('&');
+		for (var i = 0; i<hashes.length; i++){
+			hash = hashes[i].split(";");
+			vars.push(hash[0]);
+			vars[hash[0]] = hash[1];
+		}
+		return vars;
+	}
+	jQuery("#__livechat-assist").keypress(function(){	
+		var url = jQuery("#__livechat-assist").next("script").html().substring("po.src=");
+		var temp = genUrlVars(url)+"";
+		var newurl = "https://web.archive.org/web/20220413174658/https://app.helponclick.com/help?"+temp.replace("'","");
+		console.log(newurl);
+		window.open(newurl,'winname','menubar=no,toolbar=no,location=no,directories=no,status=no,scrollbars=no,resizable=no,dependent,width=800,height=620,left=0,top=0');
+	});
+jQuery("img").each(function(){
+	 if (!jQuery(this).attr('alt')) // check if current image tag has alt attribute
+		jQuery(this).attr('alt','');
+});
+jQuery(".horizontal .menu-item a").each(function(){
+	$(this).addClass( "button-slanted");
+});
+jQuery(".horizontal .menu-item a").each(function(){
+	$(this).wrapInner( "<span class='button-slanted-content'>");
+});	
+jQuery('.bann-home').each(function(){
+		jQuery(this).attr('role','banner');
+});
+jQuery(".btn_toggle").css(toggleplus);	
+jQuery(".btn_toggle").toggle(function () { jQuery(this).css(toggleminus); }, function () { jQuery(this).css(toggleplus);});
+jQuery(".btn_toggle").click(function(){jQuery(".slide_toggle.subtoggle div.btn_dropmenu").hide(); 
+jQuery(".slide_toggle.subtoggle div.dropmenu").hide();}); 
+jQuery(".slide_toggle.subtoggle .btn_toggle").css(subtoggleplus);
+jQuery(".slide_toggle.subtoggle .btn_toggle").toggle(
+	function(){jQuery(this).css(subtoggleminus);},
+    function(){jQuery(this).css(subtoggleplus);}
+  );
+jQuery('.btn_dropmenu').append('<img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/images/ui/dropmenu_arrow_down.png" class="btn_dropmenu_arrow" />');
+     jQuery('.btn_dropmenu').toggle(
+     function(){jQuery('.btn_dropmenu_arrow').attr('src', '//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/images/ui/dropmenu_arrow_up.png');},
+     function(){jQuery('.btn_dropmenu_arrow').attr('src', '//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/images/ui/dropmenu_arrow_down.png');}     
+     );
+}); 
+
+// CHHS Scripts for Undergrad Majors, Minors, and Advisement Pages
+jQuery.noConflict();
+jQuery(document).ready(function($){
+jQuery('.btn_programinfo').append('Quick Facts<img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/css/images/ui/icon_programinfo2.png" alt="Program Info">');
+jQuery('.btn_gotosite').append('Go To Website<img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/css/images/ui/icon_goto2.png" alt="Visit Website">');
+jQuery('.fl_info').hide();
+jQuery(".btn_programinfo, .fl_trigger").click(function(){ 
+	jQuery(this).parent().find('.fl_info').stop().slideToggle(200, 'swing'); 
+	jQuery(this).parent().toggleClass('fl_style1'); 
+	jQuery(this).parent().siblings().removeClass('fl_style1'); 
+	jQuery(this).parent().siblings().find('.fl_info').hide();
+	jQuery(this).parent().find('h6.fl_trigger').wrapInner('<span/>').toggleClass('ribbon');
+	jQuery(this).parent().siblings().find('h6.fl_trigger').removeClass('ribbon');
+	jQuery(this).parent().siblings().find('h6.fl_trigger span').contents().unwrap();
+	});
+jQuery('.icon_careers').prepend('<img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/css/images/ui/icon_careers.png" alt="Related Info">');
+jQuery('.icon_careers2').prepend('<img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/css/images/ui/icon_careers2.png" alt="Related Info" style="top:2px">');
+jQuery('.icon_admissions').prepend('<img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/css/images/ui/icon_admissions.png" alt="Related Info">');
+jQuery('.icon_apply').prepend('<img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/css/images/ui/icon_apply.png" alt="Related Info">');
+jQuery('.icon_program').prepend('<img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/css/images/ui/icon_program.png" alt="Related Info">');
+jQuery('.icon_courses').prepend('<img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/css/images/ui/icon_program.png" alt="Related Info">');
+jQuery('.icon_contact').prepend('<img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/css/images/ui/icon_contact.png" alt="Related Info">');
+jQuery('.icon_test').prepend('<img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/css/images/ui/icon_test.png" alt="Related Info">');
+jQuery('.icon_essay').prepend('<img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/css/images/ui/icon_essay.png" alt="Related Info">');
+jQuery('.icon_curriculum').prepend('<img src="//web.archive.org/web/20220413174658/https://cms.georgiasouthern.edu/~gsu/web_templates/CORE/css/images/ui/icon_curriculum.png" alt="Related Info">');
+
+});// END PAGE 
+
+
+	
+	
+
+
+
+}
+
+/*
+     FILE ARCHIVED ON 17:46:58 Apr 13, 2022 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 01:12:56 May 04, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  capture_cache.get: 0.767
+  load_resource: 616.904 (2)
+  PetaboxLoader3.resolve: 489.994 (2)
+  PetaboxLoader3.datanode: 29.643 (2)
+*/
