@@ -1,0 +1,578 @@
+{
+  "picture": {
+    "hidden": false,
+    "url": "/uploads/019deb2c-05d7-76fe-868a-7875d4d8117b/pictures/1777767118024.webp",
+    "size": 80,
+    "rotation": 0,
+    "aspectRatio": 1,
+    "borderRadius": 0,
+    "borderColor": "rgba(0, 0, 0, 0.5)",
+    "borderWidth": 0,
+    "shadowColor": "rgba(0, 0, 0, 0.5)",
+    "shadowWidth": 0
+  },
+  "basics": {
+    "name": "Michael Woodcock",
+    "headline": "Researcher • Developer • Full‑Stack Problem Solver • Prototyping Specialist",
+    "email": "mw24396@georgiasouthern.edu",
+    "phone": "(912) 484-1369",
+    "location": "Savannah, GA",
+    "website": {
+      "url": "https://michaelwoodc.github.io/professional_links/",
+      "label": "https://michaelwoodc.github.io/professional_links/"
+    },
+    "customFields": []
+  },
+  "summary": {
+    "title": "",
+    "columns": 1,
+    "hidden": false,
+    "content": "<p>Interdisciplinary researcher and systems engineer developing integrated hardware, software, and network solutions for research, education, automation, and applied problem‑solving.</p>"
+  },
+  "sections": {
+    "profiles": {
+      "title": "",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "experience": {
+      "title": "",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "019dea0e-733d-770c-973b-6acf2bcf9678",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": true
+          },
+          "company": "Georgia Southern University",
+          "position": "Student Worker, Tutor, Teaching Assistant",
+          "location": "",
+          "period": "September 2019 - May 2026",
+          "website": {
+            "url": "https://www.georgiasouthern.edu/",
+            "label": ""
+          },
+          "description": "<p>Supported faculty across multiple departments through tutoring, technical troubleshooting, research assistance, and instructional material development.</p><ul><li>Tutored students and assisted during hands-on labs</li><li>Reviewed submissions and created assignment manuals</li><li>Resolved technical issues with ITS</li><li>Supported research computing and lab operations</li></ul>",
+          "roles": []
+        },
+        {
+          "id": "019dea0e-733d-770c-973b-6c6430a4d319",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": true
+          },
+          "company": "Sonic Motorsports",
+          "position": "Design Engineer",
+          "location": "",
+          "period": "April 2016 - January 2026",
+          "website": {
+            "url": "https://facebook.com/sonicmotorsports",
+            "label": ""
+          },
+          "description": "<p>Engineered custom parts and solutions for high-performance and vintage vehicles:</p><ul><li><p>Restored, repaired, and optimized Ferrari 250 GTO, Acura NSX, and other specialty vehicles</p></li><li><p>Performed advanced diagnostics on drivetrains deemed irreparable by other shops</p></li><li><p>Designed and fabricated custom components</p></li><li><p>Full time from 2016 - 2018, part time &amp; consultant thereafter</p></li></ul><p></p>",
+          "roles": []
+        },
+        {
+          "id": "019dea0e-733d-770c-973b-72fe63b67c8a",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": false
+          },
+          "company": "Honda Yamaha of Savannah",
+          "position": "Powersports Technician",
+          "location": "",
+          "period": "May 2013 - March 2016",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": "<p>Diagnosed and repaired mechanical and electrical issues on motorcycles and powersports equipment.</p><ul><li>Performed intensive diagnostics on malfunctioning equipment</li><li>Managed inventory and improved service workflow</li><li>Provided diagnostic insights to manufacturers</li></ul>",
+          "roles": []
+        },
+        {
+          "id": "019dea0e-733d-770c-973b-770890450b94",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": false
+          },
+          "company": "Boaen Mechanical",
+          "position": "Estimator / Junior Project Manager",
+          "location": "",
+          "period": "April 2011 - May 2013",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": "<p>Managed project estimation, materials, and job progress for mechanical contracting projects.</p><ul><li><p>Assisted sustainable practices through accurate cost estimation</p></li><li><p>Coordinated materials and supplies deliveries for job sites</p></li><li><p>Reported progress to senior management</p></li></ul><p></p>",
+          "roles": []
+        }
+      ]
+    },
+    "education": {
+      "title": "",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "019dea0e-733d-770c-973b-78c44756725a",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": true
+          },
+          "school": "Georgia Southern University",
+          "degree": "B.S. in Information Technology",
+          "area": "Allen E. Paulson College of Engineering & Computing",
+          "grade": "",
+          "location": "Savannah, GA USA",
+          "period": "Expected May 2026",
+          "website": {
+            "url": "https://www.georgiasouthern.edu/",
+            "label": ""
+          },
+          "description": "<ul><li><p>Institutional Honors: Magna Cum Laude</p></li><li><p>Overall GPA: 3.9</p></li><li><p>Georgia Southern Elite Scholarship Recipient</p></li><li><p>Minors:</p><ul><li><p>Psychology GPA: 4.0</p></li><li><p>Applied Behavioral Analysis GPA: 4.0</p></li></ul></li></ul><p></p>"
+        },
+        {
+          "id": "019dea0e-733d-770c-973b-7ceaf3699a52",
+          "hidden": false,
+          "school": "Yamaha Technical Academy",
+          "degree": "Technical Certification",
+          "area": "",
+          "grade": "",
+          "location": "",
+          "period": "2016",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": ""
+        },
+        {
+          "id": "019dea0e-733d-770c-973b-81df8f81c6de",
+          "hidden": false,
+          "school": "K-Tech (Kawasaki) Technical University",
+          "degree": "Technical Certification",
+          "area": "",
+          "grade": "",
+          "location": "",
+          "period": "2015",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": ""
+        },
+        {
+          "id": "019dea0e-733d-770c-973b-85538e9aab54",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": true
+          },
+          "school": "H.V. Jenkins High School",
+          "degree": "High School Diploma",
+          "area": "",
+          "grade": "",
+          "location": "Savannah, GA",
+          "period": "",
+          "website": {
+            "url": "https://jenkins.sccpss.com/",
+            "label": ""
+          },
+          "description": ""
+        }
+      ]
+    },
+    "projects": {
+      "title": "",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "019dea0e-733d-770c-973b-88ad5e65eb74",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": true
+          },
+          "name": "OCER-2 Career Exploration Resource",
+          "period": "",
+          "website": {
+            "url": "https://teachpsych.github.io/STP-Career-Exploration-Resource-for-Psychology-Majors/",
+            "label": "https://teachpsych.github.io/STP-Career-Exploration-Resource-for-Psychology-Majors/"
+          },
+          "description": "<p>Used web scraping and Python programming with regex to extract and aggregate job data from documents and websites into a comprehensive psychology‑career dataset.</p>"
+        },
+        {
+          "id": "019dea0e-733d-770c-973b-8f8afc547aa3",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": true
+          },
+          "name": "DANVA-2 PC & Web Versions",
+          "period": "2019 - 2026",
+          "website": {
+            "url": "https://github.com/gingergrin/DANVA2",
+            "label": ""
+          },
+          "description": "<p>Developed and maintained the open‑source DANVA‑2 PC and web platforms, including full software implementation, UI design, and installer creation.  Javascript code was customized to run inside the Qualtrics survey platform.</p>"
+        },
+        {
+          "id": "019dea84-4761-7408-a3bb-09525dc7fc0f",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": true
+          },
+          "name": "Rat Basketball",
+          "period": "",
+          "website": {
+            "url": "https://youtu.be/K_yubpRHBfo?si=vreyUtMEJbl9W_Lt",
+            "label": ""
+          },
+          "description": "<p>Designed, constructed, programmed, and maintained apparatus and equipment for Rat Basketball games and yearly tournaments.</p>"
+        }
+      ]
+    },
+    "skills": {
+      "title": "",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "019dea0e-733d-770c-973b-9622f9c38382",
+          "hidden": false,
+          "icon": "star",
+          "iconColor": "",
+          "name": "Programming",
+          "proficiency": "",
+          "level": 4,
+          "keywords": [
+            "Python",
+            "JavaScript",
+            "MATLAB",
+            "HTML"
+          ]
+        },
+        {
+          "id": "019dea0e-733d-770c-973b-9a8b7225eae3",
+          "hidden": false,
+          "icon": "star",
+          "iconColor": "",
+          "name": "Engineering & Fabrication",
+          "proficiency": "",
+          "level": 4,
+          "keywords": [
+            "3D Printing",
+            "Autodesk Inventor",
+            "SolidWorks",
+            "Welding",
+            "Electronics Repair"
+          ]
+        },
+        {
+          "id": "019dea0e-733d-770c-973b-9e3c16570117",
+          "hidden": false,
+          "icon": "star",
+          "iconColor": "",
+          "name": "Research",
+          "proficiency": "",
+          "level": 4,
+          "keywords": [
+            "PsychoPy",
+            "Qualtrics",
+            "Eye Tracking"
+          ]
+        }
+      ]
+    },
+    "languages": {
+      "title": "",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "interests": {
+      "title": "",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "awards": {
+      "title": "",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "019dea0e-733e-74fb-814e-6a389271bab4",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": true
+          },
+          "title": "President’s List",
+          "awarder": "",
+          "date": "",
+          "website": {
+            "url": "https://meritpages.com/Michael-L-Woodcock/5005484",
+            "label": ""
+          },
+          "description": "<p>Fall 2025, Spring 2025, Fall 2024, Spring 2019</p>"
+        },
+        {
+          "id": "019dea0e-733e-74fb-814e-6f4798b7b942",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": true
+          },
+          "title": "Dean’s List",
+          "awarder": "",
+          "date": "",
+          "website": {
+            "url": "https://meritpages.com/Michael-L-Woodcock/5005484",
+            "label": ""
+          },
+          "description": "<p>Spring 2024, Fall 2018</p>"
+        },
+        {
+          "id": "019dea0e-733e-74fb-814e-768f9ef58666",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": true
+          },
+          "title": "1st Place Poster: PCEC Symposium",
+          "awarder": "Allen E. Paulson College of Engineering & Computing",
+          "date": "April 2026",
+          "website": {
+            "url": "https://www.georgiasouthern.edu/colleges/engineering-computing/research/undergraduate-research/symposium",
+            "label": ""
+          },
+          "description": "<p>Low-Cost Centimeter-Level Robot Localization; received cash prize and top RocketJudge ratings.</p>"
+        },
+        {
+          "id": "019dea0e-733e-74fb-814e-7b5d55daca6b",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": false
+          },
+          "title": "Outstanding Paper Presentation - SEPA",
+          "awarder": "",
+          "date": "2021",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": "<p>Awarded for research on mask-wearing and emotion recognition.</p>"
+        },
+        {
+          "id": "019dea0e-733e-74fb-814e-7c52e5c5ad29",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": false
+          },
+          "title": "Outstanding Student Scholar Award - GSPS",
+          "awarder": "",
+          "date": "2025",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": "<p>Supported research project which was Awarded the Outstanding Student Scholar Award - GSPS for CRAT mood/mindset research project.</p>"
+        },
+        {
+          "id": "019dea0e-733e-74fb-814e-71c4824ce07c",
+          "hidden": false,
+          "title": "Honorary Recognition for Departmental Service",
+          "awarder": "",
+          "date": "2026",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": "<p>Award created specifically in recognition of exceptional service to the Psychology Department.</p>"
+        }
+      ]
+    },
+    "certifications": {
+      "title": "",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "publications": {
+      "title": "",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "019dea0e-733e-74fb-814e-806f8c83168b",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": true
+          },
+          "title": "Facial Occlusion with Medical Masks: Impacts on Emotion Recognition",
+          "publisher": "Quarterly Journal of Experimental Psychology",
+          "date": "December 2024",
+          "website": {
+            "url": "https://www.researchgate.net/publication/386877029_EXPRESS_Facial_Occlusion_with_Medical_Masks_Impacts_on_Emotion_Recognition_Rates_for_Emotion_Types_and_Intensities",
+            "label": ""
+          },
+          "description": ""
+        },
+        {
+          "id": "019dea0e-733e-74fb-814e-852358983553",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": true
+          },
+          "title": "Does Format Matter? Investigating the Impact of Test Format on Facial Emotion Recognition",
+          "publisher": "Psychological Reports",
+          "date": "September 2025",
+          "website": {
+            "url": "https://www.researchgate.net/publication/395587396_Does_Format_Matter_Investigating_the_Impact_of_Test_Format_on_Facial_Emotion_Recognition_Ability",
+            "label": ""
+          },
+          "description": ""
+        },
+        {
+          "id": "019dea0e-733e-74fb-814e-8a9615d1ed65",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": true
+          },
+          "title": "Ratsketball: Using Low-Cost 3D Printed Operant Chambers to Probe for Generative Learning",
+          "publisher": "Mexican Journal of Behavior Analysis",
+          "date": "June 2024",
+          "website": {
+            "url": "https://www.researchgate.net/publication/379370923_Ratsketball_Using_Low-cost_3D-Printed_Operant_Chambers_to_Probe_for_Generative_Learning",
+            "label": ""
+          },
+          "description": "<p>Designed, programmed, and built low‑cost 3D‑printed operant chambers (Ratsketball) as an accessible alternative to traditional operant equipment;<a target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.revistas.unam.mx/index.php/rmac/issue/view/6333\"> published June 2024.</a></p>"
+        }
+      ]
+    },
+    "volunteer": {
+      "title": "",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "references": {
+      "title": "",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    }
+  },
+  "customSections": [
+    {
+      "title": "Conference Presentations, Events, and Posters",
+      "columns": 1,
+      "hidden": false,
+      "id": "019dea36-eaf8-74b8-bebe-e7a73758a32d",
+      "type": "publications",
+      "items": [
+        {
+          "id": "019dea38-8398-7668-ac8a-294b1e71ad44",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": true
+          },
+          "title": "Low-Cost Centimeter-Level Robot Localization Using Existing Infrastructure and Technologies",
+          "publisher": "",
+          "date": "April 2026",
+          "website": {
+            "url": "https://www.researchgate.net/publication/404304606_Low-Cost_Centimeter-Level_Robot_Localization_Using_Existing_Infrastructure_and_Technologies",
+            "label": ""
+          },
+          "description": "<p>Explored infrastructure‑based perception systems that shift sensing and computation from robots to the environment, reducing onboard hardware requirements by leveraging existing cameras, Wi‑Fi, and fixed sensors.</p>"
+        },
+        {
+          "id": "019deb63-bf1a-700c-828b-1fe4d16dfd58",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": true
+          },
+          "title": "Conversational Programming - Interactive Environments And Learning to Code",
+          "publisher": "American Association for the Advancement of Science",
+          "date": "October 2025",
+          "website": {
+            "url": "https://sstemrec.aaas.org/event/2025-s-stem-scholars-meeting/",
+            "label": ""
+          },
+          "description": "<p>Presented research on interactive programming environments that use real‑time code evaluation and immediate feedback to improve learning outcomes, integrating IT systems design with principles from learning science and behavioral models.</p>"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "template": "pikachu",
+    "layout": {
+      "sidebarWidth": 35,
+      "pages": [
+        {
+          "fullWidth": true,
+          "main": [
+            "profiles",
+            "summary",
+            "education",
+            "experience",
+            "awards",
+            "languages",
+            "interests",
+            "publications",
+            "019dea36-eaf8-74b8-bebe-e7a73758a32d",
+            "projects",
+            "volunteer",
+            "references",
+            "certifications",
+            "skills"
+          ],
+          "sidebar": []
+        }
+      ]
+    },
+    "css": {
+      "enabled": false,
+      "value": ""
+    },
+    "page": {
+      "gapX": 4,
+      "gapY": 6,
+      "marginX": 14,
+      "marginY": 12,
+      "format": "a4",
+      "locale": "en-US",
+      "hideIcons": false
+    },
+    "design": {
+      "level": {
+        "icon": "star",
+        "type": "circle"
+      },
+      "colors": {
+        "primary": "rgba(220, 38, 38, 1)",
+        "text": "rgba(0, 0, 0, 1)",
+        "background": "rgba(255, 255, 255, 1)"
+      }
+    },
+    "typography": {
+      "body": {
+        "fontFamily": "IBM Plex Serif",
+        "fontWeights": [
+          "400",
+          "500"
+        ],
+        "fontSize": 10,
+        "lineHeight": 1.5
+      },
+      "heading": {
+        "fontFamily": "IBM Plex Serif",
+        "fontWeights": [
+          "600"
+        ],
+        "fontSize": 14,
+        "lineHeight": 1.5
+      }
+    },
+    "notes": ""
+  }
+}
