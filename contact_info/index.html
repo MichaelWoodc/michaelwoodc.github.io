@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Contact Emails</title>
+<title>My Contact Info</title>
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -12,6 +12,7 @@
     padding: 2rem;
     max-width: 900px;
     margin: auto;
+    user-select: none;
   }
 
   h1, h2 {
@@ -47,13 +48,123 @@
     border-radius: 0.3rem;
     border: none;
     margin-right: 0.5rem;
+    text-align: center;
+    background: #2a2a2a;
+    color: #fff;
   }
 
   a {
     color: #4db8ff;
   }
 
-  /* Back arrow button with background (copied exactly) */
+  .progress-text {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    text-align: left;
+    display: inline-block;
+  }
+
+  .contact-list li {
+    margin: 0.5rem 0;
+  }
+
+  /* ================= SLIDER CAPTCHA STYLING ================= */
+  #slider-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem auto;
+    max-width: 300px;
+  }
+
+  .puzzle-window {
+    position: relative;
+    width: 260px;
+    height: 140px;
+    background: #2a2a2a;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+  }
+
+  /* The actual background pattern */
+  .puzzle-bg {
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+  }
+
+  /* The missing hole shadow on the background */
+  .puzzle-shadow-slot {
+    position: absolute;
+    top: 45px;
+    left: 180px; /* Target landing position */
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 6px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.8);
+  }
+
+  /* The floating piece that the user moves */
+  .puzzle-piece {
+    position: absolute;
+    top: 45px;
+    left: 20px; /* Starting position */
+    width: 50px;
+    height: 50px;
+    background: #00bcd4;
+    border-radius: 6px;
+    cursor: grab;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .puzzle-piece:active {
+    cursor: grabbing;
+  }
+
+  /* The tracking bar at the bottom */
+  .slider-track {
+    position: relative;
+    width: 260px;
+    height: 40px;
+    background: #121212;
+    border-radius: 999px;
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 0.85rem;
+  }
+
+  .slider-thumb {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 34px;
+    height: 34px;
+    background: #00bcd4;
+    border-radius: 50%;
+    cursor: grab;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  }
+
+  /* Back arrow button */
   .back-button {
     position: fixed;
     top: 1rem;
@@ -81,35 +192,25 @@
     stroke-width: 2.5;
     stroke-linecap: round;
     stroke-linejoin: round;
-    transition: transform 0.3s ease;
   }
 
   .back-button:hover {
     background: rgba(0, 255, 255, 0.15);
     color: #00bcd4;
     transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
-  }
-
-  .back-button:hover svg {
-    transform: translateX(-3px);
   }
 </style>
 </head>
 <body>
 
-<!-- Back Arrow Button -->
 <button class="back-button" onclick="history.back()">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <path d="M15 18l-6-6 6-6" />
-  </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6" /></svg>
   <span>Back</span>
 </button>
 
 <h1>Contact Me</h1>
-<p style="text-align:center;">Solve the math puzzle capcha to reveal my email address.</p>
+<p style="text-align:center;">Complete the security verification challenges to reveal my contact details.</p>
 
-<!-- ================== EMAIL 1 ================== -->
 <div class="card" id="email-card-1">
   <h2>Georgia Southern Email</h2>
   <p id="email-text-1">What is 3 + 4?</p>
@@ -117,35 +218,63 @@
   <button id="check-answer-1">Submit</button>
 </div>
 
-<!-- ================== EMAIL 2 ================== -->
-<div class="card" id="email-card-2">
-  <h2>Personal Email 1</h2>
-  <p id="email-text-2">What is 5 + 6?</p>
-  <input type="number" id="captcha-input-2" placeholder="Your answer">
-  <button id="check-answer-2">Submit</button>
+<div class="card" id="personal-card">
+  <h2>Personal Contact Info</h2>
+  
+  <div class="progress-text" id="captcha-progress">Step 1/6</div>
+  
+  <div id="personal-math-box">
+    <p id="captcha-question">What is (15 - 5) x 4?</p>
+    <input type="number" id="personal-captcha-input" placeholder="Your answer">
+    <button id="personal-captcha-submit">Submit</button>
+  </div>
+
+  <div id="slider-container">
+    <p style="margin: 0 0 1rem 0; font-size: 0.95rem;">Drag the arrow slider below to fit the puzzle piece!</p>
+    
+    <div class="puzzle-window">
+      <svg class="puzzle-bg" viewBox="0 0 260 140" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#444" stroke-width="1"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid)" />
+        <circle cx="130" cy="70" r="40" fill="none" stroke="#555" stroke-width="2" stroke-dasharray="5,5"/>
+      </svg>
+      
+      <div class="puzzle-shadow-slot"></div>
+      
+      <div class="puzzle-piece" id="puzzle-piece">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M12 2v20M17 5l-5-5-5 5"/></svg>
+      </div>
+    </div>
+
+    <div class="slider-track" id="slider-track">
+      <span id="track-label">Slide to verify &rarr;</span>
+      <div class="slider-thumb" id="slider-thumb">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M9 18l6-6-6-6"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <div id="personal-content" style="display: none;"></div>
 </div>
 
-<!-- ================== EMAIL 3 ================== -->
-<!-- <div class="card" id="email-card-3">
-  <h2>Email 3</h2>
-  <p id="email-text-3">What is 2 + 9?</p>
-  <input type="number" id="captcha-input-3" placeholder="Your answer">
-  <button id="check-answer-3">Submit</button>
-</div> -->
-
 <script>
-// ================== EMAIL DATA ==================
-const emails = [
-  "bXcyNDM5NkBnZW9yZ2lhc291dGhlcm4uZWR1",
-  "bWx3MTltbHc5MUBnbWFpbC5jb20=",
-  "bWljaGFlbDE5d29vZGNvY2s5MUBnbWFpbC5jb20="
+// ================== ENCODED DATA ==================
+const secureData = [
+  "bXcyNDM5NkBnZW9yZ2lhc291dGhlcm4uZWR1", 
+  "bWx3MTltbHc5MUBnbWFpbC5jb20=",                 
+  "bWljaGFlbDE5d29vZGNvY2s5MUBnbWFpbC5jb20=",
+  "KDkxMikgNDg0IC0gMTM2OQ==" 
 ];
 
-// ================== EMAIL 1 ==================
+// ================== STANDARD CAPTCHA (GSU) ==================
 document.getElementById('check-answer-1').addEventListener('click', () => {
   const ans = document.getElementById('captcha-input-1').value;
-  if (ans == "7") {
-    const email = atob(emails[0]);
+  if (ans === "7") {
+    const email = atob(secureData[0]);
     document.getElementById('email-text-1').innerHTML = `<a href="mailto:${email}">${email}</a>`;
     document.getElementById('captcha-input-1').remove();
     document.getElementById('check-answer-1').remove();
@@ -154,18 +283,157 @@ document.getElementById('check-answer-1').addEventListener('click', () => {
   }
 });
 
-// ================== EMAIL 2 ==================
-document.getElementById('check-answer-2').addEventListener('click', () => {
-  const ans = document.getElementById('captcha-input-2').value;
-  if (ans == "11") {
-    const email = atob(emails[1]);
-    document.getElementById('email-text-2').innerHTML = `<a href="mailto:${email}">${email}</a>`;
-    document.getElementById('captcha-input-2').remove();
-    document.getElementById('check-answer-2').remove();
-  } else {
-    alert("Oops! Try again.");
+// ================== 6-STAGE SPLIT CAPTCHA CONFIG ==================
+const challenges = [
+  { q: "What is (15 - 5) x 4?", a: 40 },
+  { q: "What is 12 + 18 - 5?", a: 25 },
+  { q: "What is 7 x 8?", a: 56 },
+  { q: "What is 100 / 4?", a: 25 },
+  { q: "What is 14 + 14?", a: 28 }
+];
+
+let currentStep = 0;
+const totalSteps = challenges.length + 1; // 5 math + 1 sliding step = 6 total
+
+const progressText = document.getElementById('captcha-progress');
+const questionText = document.getElementById('captcha-question');
+const inputField = document.getElementById('personal-captcha-input');
+const submitBtn = document.getElementById('personal-captcha-submit');
+const mathBox = document.getElementById('personal-math-box');
+const sliderBox = document.getElementById('slider-container');
+
+function updateChallenge() {
+  if (currentStep < challenges.length) {
+    progressText.innerText = `Step ${currentStep + 1}/${totalSteps}`;
+    questionText.innerText = challenges[currentStep].q;
+    inputField.value = "";
+    inputField.focus();
+  } else if (currentStep === challenges.length) {
+    // Transition cleanly to the sliding puzzle setup
+    progressText.innerText = `Step ${totalSteps}/${totalSteps}`;
+    mathBox.style.display = "none";
+    sliderBox.style.display = "flex";
+    initSliderPuzzle();
   }
+}
+
+submitBtn.addEventListener('click', handleChallengeSubmission);
+inputField.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') handleChallengeSubmission();
 });
+
+function handleChallengeSubmission() {
+  const userAnswer = parseInt(inputField.value, 10);
+  if (userAnswer === challenges[currentStep].a) {
+    currentStep++;
+    updateChallenge();
+  } else {
+    alert("Incorrect answer. Please try again!");
+    inputField.value = "";
+    inputField.focus();
+  }
+}
+
+// ================== SLIDING LOGIC ENGINE ==================
+function initSliderPuzzle() {
+  const thumb = document.getElementById('slider-thumb');
+  const track = document.getElementById('slider-track');
+  const piece = document.getElementById('puzzle-piece');
+  const label = document.getElementById('track-label');
+
+  let isDragging = false;
+  let startX = 0;
+
+  // Max distances calculations
+  const maxTrackShift = track.clientWidth - thumb.clientWidth - 4; 
+  const startPieceLeft = 20;
+  const targetPieceLeft = 180;
+  const totalPieceTravel = targetPieceLeft - startPieceLeft;
+
+  // Input listeners for Mouse & Touch Support
+  thumb.addEventListener('mousedown', dragStart);
+  window.addEventListener('mousemove', dragMove);
+  window.addEventListener('mouseup', dragEnd);
+
+  thumb.addEventListener('touchstart', dragStart, { passive: true });
+  window.addEventListener('touchmove', dragMove, { passive: false });
+  window.addEventListener('touchend', dragEnd);
+
+  function dragStart(e) {
+    isDragging = true;
+    startX = e.touches ? e.touches[0].clientX : e.clientX;
+    label.style.opacity = '0';
+  }
+
+  function dragMove(e) {
+    if (!isDragging) return;
+    if (e.cancelable) e.preventDefault();
+
+    const currentX = e.touches ? e.touches[0].clientX : e.clientX;
+    let deltaX = currentX - startX;
+
+    // Constrain slider thumb constraints 
+    if (deltaX < 0) deltaX = 0;
+    if (deltaX > maxTrackShift) deltaX = maxTrackShift;
+
+    thumb.style.left = deltaX + 'px';
+
+    // Scale puzzle piece coordinates proportionally with thumb tracker 
+    const pct = deltaX / maxTrackShift;
+    piece.style.left = (startPieceLeft + (pct * totalPieceTravel)) + 'px';
+  }
+
+  function dragEnd() {
+    if (!isDragging) return;
+    isDragging = false;
+
+    const finalPieceLeft = parseFloat(piece.style.left);
+    // Allow a small alignment tolerance margin of +/- 4 pixels
+    const matchTolerance = Math.abs(finalPieceLeft - targetPieceLeft);
+
+    if (matchTolerance <= 4) {
+      // Snapped perfectly inside slot
+      piece.style.left = targetPieceLeft + 'px';
+      thumb.style.left = maxTrackShift + 'px';
+      revealPersonalDetails();
+    } else {
+      // Failed alignment reset animation
+      thumb.style.transition = 'left 0.3s ease';
+      piece.style.transition = 'left 0.3s ease';
+      thumb.style.left = '2px';
+      piece.style.left = startPieceLeft + 'px';
+      label.style.opacity = '1';
+
+      setTimeout(() => {
+        thumb.style.transition = 'none';
+        piece.style.transition = 'none';
+      }, 300);
+    }
+  }
+}
+
+function revealPersonalDetails() {
+  sliderBox.style.display = "none";
+  progressText.remove();
+  
+  const email1 = atob(secureData[1]);
+  const email2 = atob(secureData[2]);
+  const phone = atob(secureData[3]); 
+  const cleanPhone = phone.replace(/[^0-9+]/g, '');
+
+  const contentDiv = document.getElementById('personal-content');
+  contentDiv.innerHTML = `
+    <p style="color: #4caf50; font-weight: bold; margin-bottom: 1rem;">Verification Successful!</p>
+    <ul class="contact-list">
+      <li><strong>Email:</strong> <a href="mailto:${email1}">${email1}</a></li>
+      <li><strong>Phone:</strong> <a href="tel:${cleanPhone}">${phone}</a></li>
+    </ul>
+  `;
+  contentDiv.style.display = "block";
+}
+
+// Kick off step check on load
+updateChallenge();
 </script>
 
 </body>
